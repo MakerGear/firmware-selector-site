@@ -1,0 +1,16 @@
+body{
+     
+}
+
+p{
+    font-family:"Arial",sans-serif;
+}
+
+.logo{
+    background: url('MakerGear_Logo');
+}
+
+#greet{
+    text-align:left;
+    font-family:"Arial",sans-serif;
+}
