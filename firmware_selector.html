@@ -6,56 +6,74 @@
         <title>Firmware Selector</title>
         
           <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!link type="text/css" rel="stylesheet" href="materializ/css/materialize.css"  media="screen,projection"/>
+        <!--Import bootstrap.css-->
+        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist\css\bootstrap.css">
+         <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist\js\bootstrap.js">
         <!custom css>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">  
     </head>
     <body>
-    
+    <div class="header">
         <img src="MakerGear_Logo.png">
+        <br>
+        <br>
         
         <h3 id="greet">Welcome to the MakerGear Firmware Selector</h3>
+    </div>
+        <br>
+        <br>
         
-        
-        <div class="container">
-            <div class="col s12 m6 l6">
-                <div class="row">
+        <div class="container column">
+             <div class="row">
+                    <div class="col-md-6">
                     
-                    <p>Select your Z-motor</p>
+                    <p><strong>Select your Z-motor</strong></p>
                         <p>Black Z-motor<input type="radio" name="z_motor"></p>
                         <p>Silver Z-motor<input type="radio" name="z_motor"></p>
                         <br>
                         <br>
-                    <p>Select Your Power Supply</p>
+                    <p><strong>Select Your Power Supply</strong></p>
                         <p>24V Power Supply<input type="radio" name="power"></p>
                         <p>19V Power Supply<input type="radio" name="power"></p>
                         <br>
                         <br>
-                    </div>
-                    <p>Select Z-endstop position</p>
-                    <p>Z-endstop on the Z Motor<input type="radio" name="endstop"></p>
-                    <p>Z-endstop on the top<input type="radio" name="endstop"></p>
-                    <br>
+                    <p><strong>Select Z-endstop position</strong></p>
+                        <p>Z-endstop on the Z Motor<input type="radio" name="endstop"></p>
+                        <p>Z-endstop on the top<input type="radio" name="endstop"></p>
                         <br>
-                </div>
-   
-
-            <div class="col s12 m6 l6"> 
-                <div class="row">
-                     <p>Select Your HotEnd</p>
+                        <br>
+                  </div>
+          
+                    
+                <div class="col-md-6"> 
+                
+                     <p><strong>Select Your HotEnd</strong></p>
                         <p>V4 HotEnd<input type="radio" name="hotend"></p>
                         <p>V4 HotEnd (Dual)<input type="radio" name="hotend"></p>
                         <p>V3b Hotend<input type="radio" name="hotend"></p>
                     <br>
                     <br>
-                    <p>Select your LCD</p>
+                    <p><strong>Select your LCD</strong></p>
                         <p>GeeTech<input type="radio" name="LCD"></p>
                         <p>Viki<input type="radio" name="LCD"></p>
                         <p>None<input type="radio" name="LCD"></p>
                 </div>
             </div>
         </div>
+
         
     </body>
+    
+    <script>
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
     
 </html>
