@@ -10,7 +10,7 @@
         <!--Import bootstrap.css-->
         <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist\css\bootstrap.css">
          <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist\js\bootstrap.js">
-        <!custom css>
+        <!--custom css-->
         <link rel="stylesheet" type="text/css" href="stylesheet.css">  
     </head>
     <body>
@@ -31,21 +31,25 @@
                      <div class="column submit">
                         <p><strong>Rev.E Printer</strong></p>
                     </div>
-                    <div class="submit">
-                        <button>Submit</button>
+                   <div class="submit"><button onclick="revE()" >Submit</button>
+                        
                     </div>
+       
                  </div>
                  <div class="col-md-6">         
                     <div class="column">
                         <p><strong>Rev.E Dual Printer</strong></p>
                     </div>
                     <div class="column submit">
-                         <button>Submit</button>
+                         <button onclick="dual()">Submit</button>
                     </div>
                  </div>
              </div>
           </div>
-    <br>
+        <br>
+        <hr>
+        <br>
+        <p class="header"><strong>Not sure which firmware is correct? Try our Custom Firmware Selector</strong></p>
     
             <div class="container">
              <div class="row column">
@@ -53,24 +57,26 @@
                          
                         <br>
                         <br>
+<!--Select Z motor-->
                     <p><strong>Select your Z-motor</strong></p>
-                        <p>Black Z-motor<input type="radio" name="z_motor"></p>
+                        <p>Black Z-motor<input type="radio" name="z_motor" id="Zmotor"></p>
                         <p>Silver Z-motor<input type="radio" name="z_motor"></p>
                         <br>
                         <br>
+<!--Select Power supply-->
                     <p><strong>Select Your Power Supply</strong></p>
-                        <p>24V Power Supply<input type="radio" name="power"></p>
+                        <p>24V Power Supply<input type="radio" name="power" id="Psupply"></p>
                         <p>19V Power Supply<input type="radio" name="power"></p>
                         <br>
                         <br>
+ <!--Select z endstop position-->                       
                     <p><strong>Select Z-endstop position</strong></p>
-                        <p>Z-endstop on the Z Motor<input type="radio" name="endstop"></p>
+                        <p>Z-endstop on the Z Motor<input type="radio" name="endstop" id="estop"></p>
                         <p>Z-endstop on the top<input type="radio" name="endstop"></p>
                         <br>
                         
                   </div>
-                 
-          
+                 <hr>       
                     
                 <div class="col-md-6"> 
                     <br>
@@ -80,7 +86,7 @@
                         <p>V4 HotEnd (Dual)<input type="radio" name="hotend"></p>
                         <p>V3b Hotend<input type="radio" name="hotend"></p>
                     <br>
-                    <br>
+                    
                     <p><strong>Select your LCD</strong></p>
                         <p>GeeTech<input type="radio" name="LCD"></p>
                         <p>Viki<input type="radio" name="LCD"></p>
@@ -88,14 +94,50 @@
                 </div>
             </div>
         </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="column submit">
+                        <p><strong>Submit Your Printer's Configuration</strong></p>
+                    </div>
+                    <div class="submit">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         
     </body>
     
-    <script>
-    
-    
-    
+    <script type="text/javascript">
+
+       //gets RevE download
+       function revE(){
+            var answer = confirm ("Please click to download RevE firmware.") ;
+        
+            if(answer){
+            window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";       
+            }
+            else answer = false;
+      }
+        
+        //gets RevE Dual download
+       function dual(){
+            var answer = confirm ("Please click to download RevE Dual firmware.") ;
+        
+            if(answer){
+            window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2_Dual_Extruder_Marlin.zip";       
+            }
+            else answer = false;
+      }   
+        
+        
+     
+
+        
+     
     
     
     
