@@ -20,7 +20,7 @@
         <br>
         <br>
         
-        <h3 id="greet">Welcome to the MakerGear Firmware Selector</h3>
+        <h2 id="greet">Welcome to the MakerGear Firmware Selector</h2>
     </div>
         <br>
         <br>
@@ -49,7 +49,7 @@
         <br>
         <hr>
         <br>
-        <p class="header"><strong>Not sure which firmware is correct? Try our Custom Firmware Selector</strong></p>
+        <h4 class="header">Not sure which firmware is correct? Try our Custom Firmware Selector</h4>
     
             <div class="container">
              <div class="row column">
@@ -59,20 +59,20 @@
                         <br>
 <!--Select Z motor-->
                     <p><strong>Select your Z-motor</strong></p>
-                        <p>Black Z-motor<input type="radio" name="z_motor" id="Zmotor"></p>
-                        <p>Silver Z-motor<input type="radio" name="z_motor"></p>
+                        <p>Black Z-motor<input type="radio" name="z_motor" value="yes"id="black"></p>
+                        <p>Silver Z-motor<input type="radio" name="z_motor" value="yes" id="silver"></p>
                         <br>
                         <br>
 <!--Select Power supply-->
                     <p><strong>Select Your Power Supply</strong></p>
-                        <p>24V Power Supply<input type="radio" name="power" id="Psupply"></p>
-                        <p>19V Power Supply<input type="radio" name="power"></p>
+                        <p>24V Power Supply<input type="radio" name="power" value="yes" id="24V"></p>
+                        <p>19V Power Supply<input type="radio" name="power" value="yes" id="12v"></p>
                         <br>
                         <br>
  <!--Select z endstop position-->                       
                     <p><strong>Select Z-endstop position</strong></p>
-                        <p>Z-endstop on the Z Motor<input type="radio" name="endstop" id="estop"></p>
-                        <p>Z-endstop on the top<input type="radio" name="endstop"></p>
+                        <p>Z-endstop on the Z Motor<input type="radio" name="endstop" value="yes" id="bottom"></p>
+                        <p>Z-endstop on the top<input type="radio" name="endstop" value="yes" id="top"></p>
                         <br>
                         
                   </div>
@@ -81,16 +81,17 @@
                 <div class="col-md-6"> 
                     <br>
                     <br>
+<!--hotend type-->
                      <p><strong>Select Your HotEnd</strong></p>
-                        <p>V4 HotEnd<input type="radio" name="hotend"></p>
-                        <p>V4 HotEnd (Dual)<input type="radio" name="hotend"></p>
-                        <p>V3b Hotend<input type="radio" name="hotend"></p>
+                        <p>V4 HotEnd<input type="radio" name="hotend" value="yes" id="V4"></p>
+                        <p>V4 HotEnd (Dual)<input type="radio" name="hotend" value="yes" id="V4_D"></p>
+                        <p>V3b Hotend<input type="radio" name="hotend" value="yes" id="V3b"></p>
                     <br>
-                    
+<!--LCD type-->                    
                     <p><strong>Select your LCD</strong></p>
-                        <p>GeeTech<input type="radio" name="LCD"></p>
-                        <p>Viki<input type="radio" name="LCD"></p>
-                        <p>None<input type="radio" name="LCD"></p>
+                        <p>GeeTech<input type="radio" name="LCD" value="yes" id="Geetech"></p>
+                        <p>Viki<input type="radio" name="LCD" value="yes" id="Viki"></p>
+                        <p>None<input type="radio" name="LCD" value="yes" id="none"></p>
                 </div>
             </div>
         </div>
@@ -102,7 +103,7 @@
                         <p><strong>Submit Your Printer's Configuration</strong></p>
                     </div>
                     <div class="submit">
-                        <button>Submit</button>
+                        <button onclick="firm()">Submit</button>
                     </div>
                 </div>
             </div>
@@ -132,6 +133,54 @@
             }
             else answer = false;
       }   
+        
+        //gets configuration for firmware
+        
+        function firm(){
+           var z_motor_black = document.getElementById("black").checked;
+           var z_motor_silver = document.getElementById("silver").checked;
+            
+           var p_supply_24V = document.getElementById("24V").checked;
+           var p_supply_12V = document.getElementById("12V").checked;
+            
+           var z_bottom = document.activeElement("bottom").checked;
+           var z_top  document.getElementById("top").checked;
+            
+           var hotend_V4 = document.getElementById("V4").checked;
+           var hotend_V4_D = document.getElementById("V4_D").checked;
+           var hotend_V3b = document.getElementById("V3b").checked;
+            
+           var LCD_G = document.getElementById("Geetech").checked;
+           var LCD_V = document.getElementById("Viki").checked;
+           var LCD_N = document.getElementById("none");
+            
+         if(z_motor_black == false && z_motor_silver == false){
+             
+             alert("Please select a Z Motor")
+         }
+            
+                
+            else if(z_motor_black == true) {
+                
+                alert("Black")      
+           } 
+            
+            else if(z_motor_silver == true) {
+                
+                alert("Silver")      
+           } 
+            
+            
+            
+            
+            
+            
+            
+            
+            
+         
+        }
+        
         
         
      
