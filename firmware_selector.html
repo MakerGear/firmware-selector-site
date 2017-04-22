@@ -66,13 +66,13 @@
 <!--Select Power supply-->
                     <p><strong>Select Your Power Supply</strong></p>
                         <p>24V Power Supply<input type="radio" name="power" value="yes" id="24V"></p>
-                        <p>19V Power Supply<input type="radio" name="power" value="yes" id="12v"></p>
+                        <p>19V Power Supply<input type="radio" name="power" value="yes" id="19v"></p>
                         <br>
                         <br>
  <!--Select z endstop position-->                       
                     <p><strong>Select Z-endstop position</strong></p>
-                        <p>Z-endstop on the Z Motor<input type="radio" name="endstop" value="yes" id="bottom"></p>
-                        <p>Z-endstop on the top<input type="radio" name="endstop" value="yes" id="top"></p>
+                        <p>Z-endstop Max<input type="radio" name="endstop" value="yes" id="bottom"></p>
+                        <p>Z-endstop Min<input type="radio" name="endstop" value="yes" id="top"></p>
                         <br>
                         
                   </div>
@@ -116,7 +116,7 @@
 
        //gets RevE download
        function revE(){
-            var answer = confirm ("Please click to download RevE firmware.") ;
+            var answer = confirm ("Please click to download RevE firmware.");
         
             if(answer){
             window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";       
@@ -134,62 +134,9 @@
             else answer = false;
       }   
         
-        //gets configuration for firmware
-        
-        function firm(){
-           var z_motor_black = document.getElementById("black").checked;
-           var z_motor_silver = document.getElementById("silver").checked;
-            
-           var p_supply_24V = document.getElementById("24V").checked;
-           var p_supply_12V = document.getElementById("12V").checked;
-            
-           var z_bottom = document.activeElement("bottom").checked;
-           var z_top  document.getElementById("top").checked;
-            
-           var hotend_V4 = document.getElementById("V4").checked;
-           var hotend_V4_D = document.getElementById("V4_D").checked;
-           var hotend_V3b = document.getElementById("V3b").checked;
-            
-           var LCD_G = document.getElementById("Geetech").checked;
-           var LCD_V = document.getElementById("Viki").checked;
-           var LCD_N = document.getElementById("none");
-            
-         if(z_motor_black == false && z_motor_silver == false){
-             
-             alert("Please select a Z Motor")
-         }
-            
-                
-            else if(z_motor_black == true) {
-                
-                alert("Black")      
-           } 
-            
-            else if(z_motor_silver == true) {
-                
-                alert("Silver")      
-           } 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-         
-        }
-        
-        
-        
-     
-
-        
-     
+      
     
-    
-    
+   
     
     
     </script>
