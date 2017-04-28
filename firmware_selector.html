@@ -146,7 +146,7 @@
                      </div>
                      <br>
                      <div class="submit">
-                         <button onclick="getConfig()">Submit</button>
+                         <button onclick="matchConfig()">Submit</button>
                          <br>
                          <br>
                          <h4>If you cannot find your configuration<br> contact MakerGear Support</h4>
@@ -182,26 +182,8 @@
             else answer = false;
       }   
   
-//gets user input from selector
-      function getConfig(){
-        
-          var zmotor = document.getElementById("z_motor");
-          var s1 = zmotor.selectedIndex;
-               
-          var psupply = document.getElementById("p_supply");
-          var s2 = psupply.selectedIndex;
-          
-          var endstop = document.getElementById("z_stop");
-          var s3 = endstop.selectedIndex;
-          
-          var hotend = document.getElementById("hotend");
-          var s4 = hotend.selectedIndex
-          
-          var lcd = document.getElementById("lcd");
-          var s5= lcd.selectedIndex;
-          
- //result of user selection compiles here         
-          var userConfig = [s1,s2, s3, s4, s5];
+
+      
          
 
          // alert(userConfig);
@@ -211,7 +193,30 @@
         
         function matchConfig(){
             
-            getConfig()
+//gets user input from selector            
+            function getConfig(){
+        
+                var zmotor = document.getElementById("z_motor");
+                var s1 = zmotor.selectedIndex;
+               
+                var psupply = document.getElementById("p_supply");
+                var s2 = psupply.selectedIndex;
+          
+                var endstop = document.getElementById("z_stop");
+                var s3 = endstop.selectedIndex;
+           
+                var hotend = document.getElementById("hotend");
+                var s4 = hotend.selectedIndex
+              
+                var lcd = document.getElementById("lcd");
+                var s5= lcd.selectedIndex;
+          
+ //result of user selection compiles here         
+            var userConfig = [s1,s2, s3, s4, s5];
+            
+            
+            
+                      
             
 //24v Black Z motor (Rev c and D)
             //V4 (single)section:
@@ -255,7 +260,7 @@
            //Rev.E section
            var revE = [0,0,0,0,0] //Rev.E Base Model
 		   var revEv1 = [0,0,0,0,1] //Viki1
-		   var revEv2= [0,0,0,0,2] //Viki2
+		   var revEv2 = [0,0,0,0,2] //Viki2
 	       var revEgt = [0,0,0,0,3]//Geetech
            
            
