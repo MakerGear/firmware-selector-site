@@ -5,12 +5,12 @@
         <meta charset="utf-8">
         <title>Firmware Selector</title>
         
-          <!--Import materialize.css-->
+<!--Import materialize.css-->
         <!link type="text/css" rel="stylesheet" href="materializ/css/materialize.css"  media="screen,projection"/>
         <!--Import bootstrap.css-->
         <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist\css\bootstrap.css">
          <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist\js\bootstrap.js">
-        <!--custom css-->
+<!--custom css-->
         <link rel="stylesheet" type="text/css" href="stylesheet.css">  
     </head>
     <body>
@@ -57,7 +57,7 @@
                            
                           <br>
                           <br>
- <!--Select Z motor-->
+<!--Select Z motor-->
                       <h4><strong>Select your Z-motor</strong></h4>
                           <br>
                            <center>
@@ -73,7 +73,7 @@
 
                           
 
- <!--Select Power supply-->
+<!--Select Power supply-->
                       <h4><strong>Select Your Power Supply</strong></h4>
                           <br>
                             <img src="24V_Power_Supply.jpg" height="100px" width="150">
@@ -87,7 +87,7 @@
                         <br>
                         <br>
                           
-  <!--Select z endstop position-->                       
+<!--Select z endstop position-->                       
                       <h4><strong>Select Z-endstop position</strong></h4>
                           <br>
                           <select id="z_stop" name="zstop">
@@ -110,22 +110,26 @@
                       <br>
                       <select id="hotend" name="hotend">
                         <option value="v4">V4 Hotend</option>
+                        <option value="v4d">V4 Hotend (Dual)</option>
                         <option value="v3b">v3b Hotend</option>
+    
                       </select>
                       
                     <br>
                     <br>
-                     
+<!--Select LCD-->
                       <h4><strong>Select your LCD</strong></h4>
                       <br>
                 
                       <img src="LCD_grande.jpg" height="100px" width="150px">
                       <img src="vikilcd-2.jpg" height="100px" width="150px">
+                       <img src="viki2.jpg" height="100px" width="150px">
                       <br>
                       <br>
                       <select id="lcd" name="lcd">
                         <option value="geetech">Geetech</option>
-                        <option value="viki">Viki</option>
+                        <option value="viki1">Viki 1</option>
+                        <option value="viki2">Viki 2</option>
                         <option value="none">No LCD</option>
                       </select>
                   </div>
@@ -133,7 +137,7 @@
           </div>
         
          <br>
-        
+ <!--Select custom configuration-->       
          <div class="container">
              <div class="row">
                  <div class="col-md-12">
@@ -141,7 +145,7 @@
                          <h3><strong>Submit Your Printer's Configuration</strong></h3>
                      </div>
                      <div class="submit">
-                         <button onclick="compareArray()">Submit</button>
+                         <button onclick="getConfig()">Submit</button>
                      </div>
                  </div>
              </div>
@@ -152,7 +156,7 @@
     
     <script type="text/javascript">
 
-       //gets RevE download
+//gets RevE download
        function revE(){
             var answer = confirm ("Please click to download RevE firmware.");
         
@@ -162,7 +166,7 @@
             else answer = false;
       }
         
-        //gets RevE Dual download
+//gets RevE Dual download
        function dual(){
             var answer = confirm ("Please click to download RevE Dual firmware.") ;
         
@@ -197,7 +201,7 @@
 
       }
         
-        function compareArray(){
+       /* function compareArray(){
             
             var a1 = [1,2,3];
             var a2 = [1,2,3];
@@ -207,10 +211,9 @@
                 alert("not equal")
             }
             else alert("equal")
-        }
+        }*/
             
-        
-        
+ 
     
             
     
