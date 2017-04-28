@@ -49,73 +49,104 @@
         <br>
         <hr>
         <br>
-        <div class="header">
-            <h4 >Not sure which firmware is correct?</h4>
-            <br>
-            <a href="z_motor.html"> <button>Try our Custom Firmware Selector</button></a>
-        </div>
-        
-        
-        
+          <h3 class="header">Not sure which firmware is correct? Try our Custom Firmware Selector</h3>
+      
+              <div class="container">
+               <div class="row column">
+                      <div class="col-md-6">       
+                           
+                          <br>
+                          <br>
+ <!--Select Z motor-->
+                      <h4><strong>Select your Z-motor</strong></h4>
+                          <br>
+                           <center>
+                               <img src="z_motor_comparison.JPG" height="100px" width="300px">
+                          </center>
+                          <br>
+                          <select id="z_motor" name="z_motor">
+                                <option value="z_black">Black Z Motor</option>
+                                <option value="z_silver">Silver Z Motor</option> 
+                          </select>
+                          <br>
+                          <br>
+
+                          
+
+ <!--Select Power supply-->
+                      <h4><strong>Select Your Power Supply</strong></h4>
+                          <br>
+                            <img src="24V_Power_Supply.jpg" height="100px" width="150">
+                          <br>
+                          <br>
+                          <select id="p_supply" name="psupply">
+                                <option value="24V">24V</option>
+                                <option value="19V">19V</option>                          
+                          </select>
+                          
+                        <br>
+                        <br>
+                          
+  <!--Select z endstop position-->                       
+                      <h4><strong>Select Z-endstop position</strong></h4>
+                          <br>
+                          <select id="z_stop" name="zstop">
+                                <option value="zmax">Z max (Bottom)</option>
+                                <option value="zmin">Z min (Top)</option>
+                          </select>
+                       <br>    
+                    </div>
+                  
+                  <hr>       
+                      
+                  <div class="col-md-6"> 
+                     <br>
+                     <br> 
+                    <h4><strong>Select your Hotend</strong></h4>
+                      <br>
+                      <img src="v4.jpg"  height="100px" width="150px">
+                      <img src="v3b.jpg" height="100px" width="150px">
+                      <br>
+                      <br>
+                      <select id="hotend" name="hotend">
+                        <option value="v4">V4 Hotend</option>
+                        <option value="v3b">v3b Hotend</option>
+                      </select>
+                      
+                    <br>
+                    <br>
+                     
+                      <h4><strong>Select your LCD</strong></h4>
+                      <br>
                 
-<!--Select Z motor
-                    <p><strong>Select your Z-motor</strong></p>
-                        <p>Black Z-motor<input type="radio" name="z_motor" value="yes"id="black"></p>
-                        <p>Silver Z-motor<input type="radio" name="z_motor" value="yes" id="silver"></p>
-                        <br>
-                        <br>
--->
-                        
-<!--Select Power supply
-                    <p><strong>Select Your Power Supply</strong></p>
-                        <p>24V Power Supply<input type="radio" name="power" value="yes" id="24V"></p>
-                        <p>19V Power Supply<input type="radio" name="power" value="yes" id="19v"></p>
-                        <br>
-                        <br>
--->
- <!--Select z endstop position                      
-                    <p><strong>Select Z-endstop position</strong></p>
-                        <p>Z-endstop Max<input type="radio" name="endstop" value="yes" id="bottom"></p>
-                        <p>Z-endstop Min<input type="radio" name="endstop" value="yes" id="top"></p>
-                        <br>
-                        
+                      <img src="LCD_grande.jpg" height="100px" width="150px">
+                      <img src="vikilcd-2.jpg" height="100px" width="150px">
+                      <br>
+                      <br>
+                      <select id="lcd" name="lcd">
+                        <option value="geetech">Geetech</option>
+                        <option value="viki">Viki</option>
+                        <option value="none">No LCD</option>
+                      </select>
                   </div>
-                 <hr>       
-                    
-                <div class="col-md-6"> 
-                    <br>
-  
--->
-<!--hotend type
-                     <p><strong>Select Your HotEnd</strong></p>
-                        <p>V4 HotEnd<input type="radio" name="hotend" value="yes" id="V4"></p>
-                        <p>V4 HotEnd (Dual)<input type="radio" name="hotend" value="yes" id="V4_D"></p>
-                        <p>V3b Hotend<input type="radio" name="hotend" value="yes" id="V3b"></p>
-                    <br>
--->
-                        
-<!--LCD type                   
-                    <p><strong>Select your LCD</strong></p>
-                        <p>GeeTech<input type="radio" name="LCD" value="yes" id="Geetech"></p>
-                        <p>Viki<input type="radio" name="LCD" value="yes" id="Viki"></p>
-                        <p>None<input type="radio" name="LCD" value="yes" id="none"></p>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="column submit">
-                        <p><strong>Submit Your Printer's Configuration</strong></p>
-                    </div>
-                    <div class="submit">
-                        <button onclick="firm()">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
---> 
+              </div>
+          </div>
+        
+         <br>
+        
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-12">
+                     <div class="column submit">
+                         <h3><strong>Submit Your Printer's Configuration</strong></h3>
+                     </div>
+                     <div class="submit">
+                         <button onclick="compareArray()">Submit</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+ 
         
     </body>
     
@@ -141,10 +172,47 @@
             else answer = false;
       }   
         
-      
+      function getConfig(){
+        
+          var zmotor = document.getElementById("z_motor");
+          var s1 = zmotor.selectedIndex;
+               
+          var psupply = document.getElementById("p_supply");
+          var s2 = psupply.selectedIndex;
+          
+          var endstop = document.getElementById("z_stop");
+          var s3 = endstop.selectedIndex;
+          
+          var hotend = document.getElementById("hotend");
+          var s4 = hotend.selectedIndex
+          
+          var lcd = document.getElementById("lcd");
+          var s5= lcd.selectedIndex;
+          
+          
+          var userConfig = [s1,s2, s3, s4, s5];
+          
+          
+          alert(userConfig);
+
+      }
+        
+        function compareArray(){
+            
+            var a1 = [1,2,3];
+            var a2 = [1,2,3];
+            
+            if(a1 != a2){
+                
+                alert("not equal")
+            }
+            else alert("equal")
+        }
+            
+        
+        
     
-   
-    
+            
     
     </script>
     
