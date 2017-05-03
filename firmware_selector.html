@@ -16,14 +16,14 @@
     <body>
     <div class="header">
         <img src="MakerGear_Logo.png">
-        <br>
-        <br>
-        <br>
+            <br>
+            <br>
+            <br>
         
         <h2 id="greet">Welcome to the MakerGear Firmware Selector</h2>
     </div>
-        <br>
-        <br>
+            <br>
+            <br>
         
         <div class="container column">
              <div class="row">
@@ -46,9 +46,9 @@
                  </div>
              </div>
           </div>
-        <br>
-        <hr>
-        <br>
+            <br>
+            <hr>
+            <br>
           <h3 class="header">Not sure which firmware is correct? Try our Custom Firmware Selector</h3>
       
               <div class="container">
@@ -147,11 +147,11 @@
                      <br>
                      <div class="submit">
                          <button onclick="matchConfig()">Submit</button>
-                         <br>
-                         <br>
+                            <br>
+                            <br>
                          <h4>If you cannot find your configuration<br> contact MakerGear Support</h4>
-                          <br>
-                         <br>
+                            <br>
+                            <br>
                      </div>
                  </div>
              </div>
@@ -181,43 +181,38 @@
             }
             else answer = false;
       }   
-  
-
-      
-         
-
-         // alert(userConfig);
-
-      }
         
         
-        function matchConfig(){
+     function matchConfig(){
             
 //gets user input from selector            
-            function getConfig(){
+          
         
                 var zmotor = document.getElementById("z_motor");
-                var s1 = zmotor.selectedIndex;
+                var s1 = parseInt(zmotor.selectedIndex);
                
                 var psupply = document.getElementById("p_supply");
-                var s2 = psupply.selectedIndex;
+                var s2 = parseInt(psupply.selectedIndex);
           
                 var endstop = document.getElementById("z_stop");
-                var s3 = endstop.selectedIndex;
+                var s3 = parseInt(endstop.selectedIndex);
            
                 var hotend = document.getElementById("hotend");
-                var s4 = hotend.selectedIndex
+                var s4 = parseInt(hotend.selectedIndex);
               
                 var lcd = document.getElementById("lcd");
-                var s5= lcd.selectedIndex;
+                var s5= parseInt(lcd.selectedIndex);
           
- //result of user selection compiles here         
-            var userConfig = [s1,s2, s3, s4, s5];
+ //result of user selection compiles here 
+                //var userconfig [1,1,1,1,1];
+         
+                 var userConfig = [s1,s2, s3, s4, s5];  
+                
+                
             
-            
-            
-                      
-            
+                         
+                //alert(result);
+       
 //24v Black Z motor (Rev c and D)
             //V4 (single)section:
             var v4bm = [0,0,1,0,0];//Base Model V4 black_z. zmin
@@ -256,19 +251,31 @@
 		   var sv4dv2 = [1,0,0,1,2]; //Viki2 not supported
 	       var sv4dgt = [1,0,0,1,3]; //Geetech not supported
            
-//Rev.E section    
+//Rev.E section    "
            //Rev.E section
-           var revE = [0,0,0,0,0] //Rev.E Base Model
-		   var revEv1 = [0,0,0,0,1] //Viki1
-		   var revEv2 = [0,0,0,0,2] //Viki2
-	       var revEgt = [0,0,0,0,3]//Geetech
-           
-           
-           
-           
-           
-        }
-      
+           var revE = [0,0,0,0,0]; //Rev.E Base Model
+		   var revEv1 = [0,0,0,0,1]; //Viki1
+		   var revEv2 = [0,0,0,0,2];//Viki2
+	       var revEgt = [0,0,0,0,3];//Geetech
+         
+//Rev.E Dual section
+           var revEd = [0,0,0,1,0]
+           var revEdv1 = [0,0,0,1,1]
+           var revEdv2 = [0,0,0,1,2]
+           var revEdgt = [0,0,0,1,3]
+         
+           var m2configs = [[v4bm],[v4v1],[v4v2],[v4gt],[v4dbm],[v4dv1],[v4dv2],[v4dgt],[v3bbm],[v3bv1][v3bv2],[v3bgt]
+                           [sv3bbm][sv3bv1],[sv3bv2],[sv3bgt][sv4bm][sv4v1],[sv4v2],[sv4gt],[sv4dbm][sv4dv1],[sv4dv2]
+                           [sv4gt],[revE],[revEv1],[revEv2],[revEgt],[revEd],[revEdv1],[revEdv2],[revEdgt]];
+              
+          
+            var t1 = [0,0,0];
+            var t2 = [0,0,0];
+            
+            
+            
+     }
+                
             
  
     
