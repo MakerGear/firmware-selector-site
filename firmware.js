@@ -24,22 +24,22 @@
                  
          //24v Black Z motor (Rev c and D)
             //V4 (single)section:
-            var v4bm = [0,0,1,0,0];//Base Model V4 black_z. zmin
-            var v4v1 = [0,0,1,0,1];//Viki1
-		    var v4v2 = [0,0,1,0,2];//Viki2
-	        var v4gt = [0,0,1,0,3];//Geetech
+           var v4bm = [0,0,1,0,0];//Base Model V4 black_z. zmin
+           var v4v1 = [0,0,1,0,1];//Viki1
+		   var v4v2 = [0,0,1,0,2];//Viki2
+	       var v4gt = [0,0,1,0,3];//Geetech
             
             //V4 dual section:
-	        var v4dbm = [0,0,1,1,0];//V4 Dual Bas Model
-            var v4dv1 = [0,0,1,1,1];//Viki1 not supported
-		    var v4dv2 = [0,0,1,1,2]; //Viki2 not supported
-	        var v4dgt = [0,0,1,1,3];// Geetech not supported
+	       var v4dbm = [0,0,1,1,0];//V4 Dual Bas Model
+           var v4dv1 = [0,0,1,1,1];//Viki1 not supported
+		   var v4dv2 = [0,0,1,1,2]; //Viki2 not supported
+	       var v4dgt = [0,0,1,1,3];// Geetech not supported
             
             //V3b section:
-	        var v3bbm = [0,0,0,2,0]; //Base model
-		    var v3bv1 = [0,0,0,2,1]; //Viki1
-		    var v3bv2 = [0,0,0,2,2]; //Viki2
-	        var v3bgt = [0,0,0,2,3]; //Geetech
+	       var v3bbm = [0,0,0,2,0]; //Base model
+		   var v3bv1 = [0,0,0,2,1]; //Viki1
+		   var v3bv2 = [0,0,0,2,2]; //Viki2
+	       var v3bgt = [0,0,0,2,3]; //Geetech
             
 //Silver z motor section 
            //Silver V3b section:	
@@ -68,10 +68,11 @@
 	        var revEgt = [0,0,0,0,3];//Geetech
          
 //Rev.E Dual section
-           var revEdbm = [0,0,0,1,0]
-           var revEdv1 = [0,0,0,1,1]
-           var revEdv2 = [0,0,0,1,2]
-           var revEdgt = [0,0,0,1,3]
+            var revEdbm = [0,0,0,1,0];
+            var revEdv1 = [0,0,0,1,1];
+            var revEdv2 = [0,0,0,1,2];
+            var revEdgt = [0,0,0,1,3];
+             
          
        
     
@@ -137,6 +138,7 @@
          var result30 = _.isEqual(userConfig,revEdv1);
          var result31 = _.isEqual(userConfig,revEdv2);
          var result32 = _.isEqual(userConfig,revEdgt);
+//
          
 //run test:
          
@@ -321,10 +323,115 @@
             else answer = false;
             }
          
-         
-          
+         else if(result21){
+            var answer = confirm ("Please click to download your firmware.");
         
-          else alert("nope")
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2_Dual_Extruder_Marlin.zip";     
+                }
+            else answer = false;
+            }
+         
+         else if(result22){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+         else if(result23){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+         else if(result24){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+         else if(result25){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";     
+                }
+            else answer = false;
+            }
+         
+          else if(result26){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+          else if(result27){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+          else if(result28){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";     
+                }
+            else answer = false;
+            }
+         
+          else if(result29){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";     
+                }
+            else answer = false;
+            }
+         
+          else if(result30){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V104%20-%20Dual%20-%20Viki.zip";     
+                }
+            else answer = false;
+            }
+         
+          else if(result31){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+          }
+         
+         else if(result32){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";     
+                }
+            else answer = false;
+            }
+         
+
          
         }
                  
