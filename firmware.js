@@ -49,7 +49,7 @@
 	       var sv3bgt = [1,0,0,2,3]; //Geetech
            
            //Silver V4 section:
-	      var sv4bm = [1,0,0,0,0]; //Base Model:
+	       var sv4bm = [1,0,0,0,0]; //Base Model:
 		   var sv4v1 = [1,0,0,0,1]; //Viki1
 		   var sv4v2 = [1,0,0,0,2]; //Viki2
 	       var sv4gt = [1,0,0,0,3]; //Geetech
@@ -68,7 +68,7 @@
 	        var revEgt = [0,0,0,0,3];//Geetech
          
 //Rev.E Dual section
-           var revEd = [0,0,0,1,0]
+           var revEdbm = [0,0,0,1,0]
            var revEdv1 = [0,0,0,1,1]
            var revEdv2 = [0,0,0,1,2]
            var revEdgt = [0,0,0,1,3]
@@ -94,11 +94,56 @@
                 var lcd = document.getElementById("lcd");
                 var s5= parseInt(lcd.selectedIndex);
           
- //result of user selection compiles here 
-               
-                var userConfig = [s1,s2, s3, s4, s5];  
-                
-                var result = _.isEqual(userConfig,revEbm);
+//result of user selection compiles here :
+                var userConfig = [s1,s2, s3, s4, s5];
+         
+//test result for black Z single V4 section:         
+         var result1 = _.isEqual(userConfig,v4bm);
+         var result2 = _.isEqual(userConfig,v4v1);
+         var result3 = _.isEqual(userConfig,v4v2);
+         var result4 = _.isEqual(userConfig,v4gt);
+//test result for black Z dual V4 section:
+         var result5 = _.isEqual(userConfig,v4dbm);
+         var result6 = _.isEqual(userConfig,v4dv1);
+         var result7 = _.isEqual(userConfig,v4dv2);
+         var result8 = _.isEqual(userConfig,v4dgt);
+//test result for black Z single V3B section: 
+         var result9 = _.isEqual(userConfig,v3bbm);
+         var result10 = _.isEqual(userConfig,v3bv1);
+         var result11 = _.isEqual(userConfig,v3bv2);
+         var result12 = _.isEqual(userConfig,v3bgt);
+//test results for silver V3b section:
+         var result13 = _.isEqual(userConfig,sv3bbm);
+         var result14 = _.isEqual(userConfig,sv3bv1);
+         var result15 = _.isEqual(userConfig,sv3bv2);
+         var result16 = _.isEqual(userConfig,sv3bgt);
+//test results for silver V4 section:
+         var result17 = _.isEqual(userConfig,sv4bm);
+         var result18 = _.isEqual(userConfig,sv4v1);
+         var result19 = _.isEqual(userConfig,sv4v2);
+         var result20 = _.isEqual(userConfig,sv4gt);
+//test results for silver V4 dual section:
+         var result21 = _.isEqual(userConfig,sv4bm);
+         var result22 = _.isEqual(userConfig,sv4v1);
+         var result23 = _.isEqual(userConfig,sv4v2);
+         var result24 = _.isEqual(userConfig,sv4gt);
+//test results for Rev.E section:
+         var result25 = _.isEqual(userConfig,reEbm);
+         var result26 = _.isEqual(userConfig,revEv1);
+         var result27 = _.isEqual(userConfig,revEv2);
+         var result28 = _.isEqual(userConfig,revEgt);
+//test results for Rev.E dual section:
+         var result29 = _.isEqual(userConfig,reEdbm);
+         var result30 = _.isEqual(userConfig,revEdv1);
+         var result31 = _.isEqual(userConfig,revEdv2);
+         var result32 = _.isEqual(userConfig,revEdgt);
+         
+         
+         
+         
+         
+         
+         
          
                 if(result){
                     alert("userConfig");
