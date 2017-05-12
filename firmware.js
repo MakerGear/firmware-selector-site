@@ -176,14 +176,162 @@
                 }
             else answer = false;
             }
-                 
-           
+         
+         else if(result5){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2_Dual_Extruder_Marlin_Black_Z_Motor.zip";     
+                }
+            else answer = false;
+            }
+         
+         else if(result6){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+         else if(result7){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+         else if(result8){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+         else if(result9){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-11-30-2015.zip";     
+                }
+            else answer = false;
+            }
+             
+         else if(result10){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_24Vw24Vheater.zip";     
+                }
+            else answer = false;
+            }
+         
+             else if(result11){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+             else if(result12){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+          else if(result13){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin24r2.zip";     
+                }
+            else answer = false;
+            }
+         
+           else if(result14){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_942013.zip";     
+                }
+            else answer = false;
+            }
+         
+          else if(result15){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+         else if(result16){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location=" http://makergear.wikidot.com/local--files/m2-lcd-panel/M2_Marlin_RRDSC_v1.0.zip";     
+                }
+            else answer = false;
+            }
+         
+         else if(result17){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location=" http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-01-14-2016-OriginalZMotor.zip";     
+                }
+            else answer = false;
+            }
+         
+         else if(result18){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_24Vw24Vheater.zip";     
+                }
+            else answer = false;
+            }
+         
+         else if(result19){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                }
+            else answer = false;
+            }
+         
+         else if(result20){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wikidot.com/local--files/m2-lcd-panel/M2_Marlin_RRDSC_v1.0.zip";     
+                }
+            else answer = false;
+            }
+         
+         
+          
+        
+          else alert("nope")
+         
         }
                  
                  
                  
-         else alert("nope")
+        
                
     
-     }
+     
                 
