@@ -30,7 +30,7 @@
 	       var v4gt = [0,0,1,0,3];//Geetech
             
             //V4 dual section:
-	       var v4dbm = [0,0,1,1,0];//V4 Dual Bas Model
+	       var v4dbm = [0,0,1,1,0];//V4 Dual Base Model
            var v4dv1 = [0,0,1,1,1];//Viki1 not supported
 		   var v4dv2 = [0,0,1,1,2]; //Viki2 not supported
 	       var v4dgt = [0,0,1,1,3];// Geetech not supported
@@ -165,7 +165,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                   alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")     
+                   alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")     
                 }
             else answer = false;
             }
@@ -192,7 +192,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -201,7 +201,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -210,7 +210,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -237,7 +237,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -246,7 +246,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -273,7 +273,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -309,7 +309,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -336,7 +336,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -345,7 +345,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -354,7 +354,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -372,7 +372,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -381,7 +381,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
@@ -417,7 +417,7 @@
             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")      
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
           }
@@ -431,7 +431,7 @@
             else answer = false;
             }
          
-         else alert("Your configuration is not supported. Please contact support@makergear.com")
+          else alert("Your printer configuration appears to be non-standard. Please contact support@makergear.com")
          
         }
                  
