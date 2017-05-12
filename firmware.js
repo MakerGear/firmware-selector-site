@@ -128,27 +128,62 @@
          var result23 = _.isEqual(userConfig,sv4v2);
          var result24 = _.isEqual(userConfig,sv4gt);
 //test results for Rev.E section:
-         var result25 = _.isEqual(userConfig,reEbm);
+         var result25 = _.isEqual(userConfig,revEbm);
          var result26 = _.isEqual(userConfig,revEv1);
          var result27 = _.isEqual(userConfig,revEv2);
          var result28 = _.isEqual(userConfig,revEgt);
 //test results for Rev.E dual section:
-         var result29 = _.isEqual(userConfig,reEdbm);
+         var result29 = _.isEqual(userConfig,revEdbm);
          var result30 = _.isEqual(userConfig,revEdv1);
          var result31 = _.isEqual(userConfig,revEdv2);
          var result32 = _.isEqual(userConfig,revEdgt);
          
+//run test:
          
-         
-         
-         
-         
-         
-         
-                if(result){
-                    alert("userConfig");
+         if(result1){
+             
+                var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-11-30-2015.zip";     
+                 }
+            else answer = false;
+              
+         }
+         else if(result2){
+                 var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_24Vw24Vheater.zip";     
                 }
-               else alert("nope");
+            else answer = false;
+            }
+                 
+        else if(result3){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                   alert("This LCD configuration is not supported. Please contact support.makergear.com and they may be able to help you. ")     
+                }
+            else answer = false;
+            }
+         
+          else if(result4){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2%20Marlin%20-%20Geeetech%20LCD%20-%20Black%20Z%20Motor%20-%2010-19-2015.zip";     
+                }
+            else answer = false;
+            }
+                 
+           
+        }
+                 
+                 
+                 
+         else alert("nope")
+               
     
      }
                 
