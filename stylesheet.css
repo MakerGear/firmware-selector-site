@@ -18,6 +18,12 @@ p{
 .header{
     text-align: center;
 }
+
+.tutorial{
+    text-align: center;
+    padding: 50px;
+}
+
 .column{
    text-align: center;
 }
