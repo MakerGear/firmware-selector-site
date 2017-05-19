@@ -1,6 +1,10 @@
 /*css for main page */
 body{
      padding:10px;
+     background-image:url(M2%20background%201.jpg);
+     background-size:cover;
+     background-repeat:no-repeat;
+     background-attachment: fixed;
 }
 
 p{
