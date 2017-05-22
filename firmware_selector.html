@@ -78,7 +78,7 @@
                       <h4><strong>Select your Z-motor</strong></h4>
                           <br>
                            <center>
-                               <img src="z_motor_comparison.JPG" height="120px" width="320px">
+                               <img src="z_motor_comparison.JPG" height="140px" width="340px">
                           </center>
                           <br>
                           <select id="z_motor" name="z_motor">
@@ -97,9 +97,11 @@
                        <br>
                       <h4><strong>Select Your Power Supply</strong></h4>
                           <br>
-                            <img src="24V_Power_Supply.jpg" height="120px" width="170">
+                            <div >
+                                <img class="pics" src="24V_Power_Supply.jpg">
+                            </div>
                           <br>
-                          <br>
+                          
                           <select id="p_supply" name="psupply">
                                 <option value="24V">24V</option>                             
                           </select>
@@ -118,10 +120,11 @@
                   <br>
                   <br>
                       <h4><strong>Select Z-endstop position</strong></h4>
-                  <p>Zmax Bottom</p>
-                  <img src="Z%20max.jpg" height="120px" width="170">
+                  <pre><strong>Zmax Bottom                                   Zmin Top        </strong></pre>
+                  <img class="pics" src="Z%20max.jpg">
+                   <img class="pics" src="dsc07831-m2-z-min-limit-switch.jpg">
                   <br>
-                  <br>
+                  
                           <select id="z_stop" name="zstop">
                                 <option value="zmax">Z max (Bottom)</option>
                                 <option value="zmin">Z min (Top)</option>
@@ -136,11 +139,11 @@
                      <br>
                      <br> 
                     <h4><strong>Select your Hotend</strong></h4>
-                      <br>
-                      <img src="v4.jpg"  height="120px" width="170px">
-                      <img src="v3b.jpg" height="120px" width="170px">
-                      <br>
-                      <br>
+                      <pre><strong>V4 Hot End                             V3B HotEnd</strong></pre>
+                            <img class="pics" src="v4.jpg">
+                            <img class="pics" src="v3b.jpg">
+                     <br>
+
                       <select id="hotend" name="hotend">
                         <option value="v4">V4 Hotend</option>
                         <option value="v4d">V4 Hotend (Dual)</option>
@@ -157,13 +160,12 @@
                     <div class="row column">
                         <div class="col-md-12">
                       <h4><strong>Select your LCD</strong></h4>
+                            <pre><strong>   Viki 1                                       Viki 2                                   Geeetech    </strong></pre>                       
+                        <img class="pics" src="viki_1.jpg">
+                        <img class="pics" src="viki2.jpg">
+                        <img class="pics" src="Geeetech.jpg">
                       <br>
-                
-                      <img src="LCD_grande.jpg" height="120px" width="170px">
-                      <img src="vikilcd-2.jpg" height="120px" width="170px">
-                       <img src="viki2.jpg" height="120px" width="170px">
-                      <br>
-                      <br>
+                     
                       <select id="lcd" name="lcd">
                             <option value="none">No LCD</option>
                             <option value="viki1">Viki 1</option>

@@ -9,7 +9,7 @@
             }
             else answer = false;
       }
-        
+       
 //gets RevE Dual download
        function dual(){
             var answer = confirm ("Please click to download RevE Dual firmware.");
@@ -22,7 +22,7 @@
      
     
             
-         //24v Black Z motor (Rev c and D)
+ //24v Black Z motor (Rev c and D)
             //V4 (single)section:
            var v4bm = [0,0,1,0,0];//Base Model V4 black_z. zmin
            var v4v1 = [0,0,1,0,1];//Viki1
@@ -36,10 +36,10 @@
 	       var v4dgt = [0,0,1,1,3];// Geetech not supported
             
             //V3b section:
-	       var v3bbm = [0,0,0,2,0]; //Base model
-		   var v3bv1 = [0,0,0,2,1]; //Viki1
-		   var v3bv2 = [0,0,0,2,2]; //Viki2
-	       var v3bgt = [0,0,0,2,3]; //Geetech
+	       var v3bbm = [0,0,1,2,0]; //Base model
+		   var v3bv1 = [0,0,1,2,1]; //Viki1
+		   var v3bv2 = [0,0,1,2,2]; //Viki2
+	       var v3bgt = [0,0,1,2,3]; //Geetech
             
 //Silver z motor section 
            //Silver V3b section:	
@@ -79,7 +79,6 @@
 //gets user input from selector         
        function matchConfig(){
 
-
                 var zmotor = document.getElementById("z_motor");
                 var s1 = parseInt(zmotor.selectedIndex);
                
@@ -96,18 +95,12 @@
                 var s5= parseInt(lcd.selectedIndex);
           
 //result of user selection compiles here :
-                var userConfig = [s1,s2, s3, s4, s5];
+                var userConfig = [s1, s2, s3, s4, s5];
          
-               var m2Configs = [[revEbm]];
+               var m2Configs = [v4bm, v4v1, v4v2, v4gt, v4dbm, v4dv1, v4dv2, v4dgt, v3bbm, v3bv1, v3bv2, v3bgt, sv3bbm, sv3bv1, sv3bv2, sv3bgt, sv4bm, sv4v1, sv4v2, sv4gt, sv4dbm, sv4dv1, sv4dv2, sv4dgt, revEbm, revEv1, revEv2, revEgt, revEdbm, revEdv1, revEdv2, revEdgt];
            
-           
-           
-           
-          //[v4bm] [v4v1],[v4v2],[v4gt],[v4dbm],[v4dv1],[v4dv2],[v4dgt],[v3bbm],[v3bv1],[v3bv2],[v3bgt],[sv3bbm],[sv3bv1],[sv3bv2],[sv3bgt],[sv4bm],[sv4v1],[sv4v2],[sv4gt],[sv4dbm],[sv4dv1],[sv4dv2],[sv4dgt],[revEbm],[revEv1],[revEv2],[revEgt],[revEdbm],[revEdv1],[revEdv2],[revEdgt]
          
-
-         
-                var result = m2Configs.findIndex(function(arr) {
+               var result = m2Configs.findIndex(function(arr) {
                     return arr.every(function(value, i) {
                         return value === userConfig[i];
                     });
@@ -116,16 +109,16 @@
          
 //run test:
          
-         //if(result == 0){
-             alert(result);
-               // var answer = confirm ("Please click to download your firmware.");
+         if(result == 0){
+            
+                var answer = confirm ("Please click to download your firmware.");
         
-               //if(answer){
-                 //   window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-11-30-2015.zip";     
-              //   }
-           // else answer = false;    
+               if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-11-30-2015.zip";     
+                 }
+            else answer = false;    
          }
-          /*  
+            
             
          else if(result == 1 ){
                  var answer = confirm ("Please click to download your firmware.");
@@ -407,11 +400,7 @@
             } 
           
           else alert("Your printer configuration appears to be non-standard. Please contact support@makergear.com")
-         
-        }*/
-                 
-                
-                 
+}
         
                
     
