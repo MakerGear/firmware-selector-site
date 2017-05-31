@@ -17,7 +17,7 @@
     </head>
     <body>
     <div class="header">
-        <a href="https://www.makergear.com/"><img src="MakerGear_Logo.png"></a>
+        <a href="https://www.makergear.com/"><img src="MakerGear_Logo.png" alt="MakerGear Logo" ></a>
         
             <br>
             <br>
@@ -66,7 +66,7 @@
             <br>
             <hr>
             <br>
-          <h3 class="header">Not sure which firmware is correct?  Try our Custom Firmware Selector</h3>
+          <h3 class="header">Not sure which firmware is correct?  <br><br>Try our Custom Firmware Selector</h3>
       
               <div class="container">
                <div class="row column">
@@ -77,9 +77,21 @@
 <!--Select Z motor-->
                       <h4><strong>Select your Z-motor</strong></h4>
                           <br>
-                           <center>
-                               <img src="z_motor_comparison.JPG" height="140px" width="340px">
-                          </center>
+                           <div >
+                               <img id="myImg" src="z_motor_comparison.JPG" alt="z_motor" width="340px", height="140px" >
+                          </div>
+                         <!-- The Modal -->
+                          <div id="myModal" class="modal">
+
+                              <!-- The Close Button -->
+                                <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+                              <!-- Modal Content (The Image) -->
+                                <img class="modal-content" id="img01">
+
+                                <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                            </div>>
                           <br>
                           <select id="z_motor" name="z_motor">
                                 <option value="z_black">Black Z Motor</option>
@@ -87,6 +99,7 @@
                           </select>
                           <br>
                           <br>
+                          
                    </div>
 
                           
@@ -98,7 +111,7 @@
                       <h4><strong>Select Your Power Supply</strong></h4>
                           <br>
                             <div >
-                                <img class="pics" src="24V_Power_Supply.jpg">
+                                <img class="pics" src="24V_Power_Supply.jpg" alt="power supply">
                             </div>
                           <br>
                           
@@ -121,8 +134,8 @@
                   <br>
                       <h4><strong>Select Z-endstop position</strong></h4>
                   <pre><strong>          Zmax Bottom                              Zmin Top               </strong></pre>
-                  <img class="pics" src="Z%20max.jpg">
-                   <img class="pics" src="dsc07831-m2-z-min-limit-switch.jpg">
+                  <img class="pics" src="Z%20max.jpg" alt="z max">
+                   <img class="pics" src="dsc07831-m2-z-min-limit-switch.jpg" alt="z min">
                   <br>
                   
                           <select id="z_stop" name="zstop">
@@ -140,8 +153,8 @@
                      <br> 
                     <h4><strong>Select your Hotend</strong></h4>
                       <pre><strong>V4 Hot End                             V3B HotEnd</strong></pre>
-                            <img class="pics" src="v4.jpg">
-                            <img class="pics" src="v3b.jpg">
+                            <img class="pics" src="v4.jpg" alt="V4 Hotend">
+                            <img class="pics" src="v3b.jpg" alt="V3B Hotend">
                      <br>
 
                       <select id="hotend" name="hotend">
@@ -161,9 +174,9 @@
                         <div class="col-md-12">
                       <h4><strong>Select your LCD</strong></h4>
                             <pre><strong>   Viki 1                                       Viki 2                                   Geeetech    </strong></pre>                       
-                        <img class="pics" src="viki_1.jpg">
-                        <img class="pics" src="viki2.jpg">
-                        <img class="pics" src="Geeetech.jpg">
+                        <img class="pics" src="viki_1.jpg" alt="Viki 1 LCD">
+                        <img class="pics" src="viki2.jpg" alt="Viki 2 LCD">
+                        <img class="pics" src="Geeetech.jpg" alt="Geeetech LCD">
                       <br>
                      
                       <select id="lcd" name="lcd">
