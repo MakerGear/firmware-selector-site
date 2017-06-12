@@ -4,14 +4,11 @@
     <head>
         <meta charset="utf-8">
         <title>Firmware Selector</title>
-        
-<!--Import materialize.css-->
-        <!link type="text/css" rel="stylesheet" href="materializ/css/materialize.css"  media="screen,projection"/>
-        <!--Import bootstrap.css-->
+
+<!--Import bootstrap.css-->
         <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist\css\bootstrap.css">
         <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist\js\bootstrap.js">
-        <script src="firmware.js" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" ></script>
+
 <!--custom css-->
         <link rel="stylesheet" type="text/css" href="stylesheet.css">  
     </head>
@@ -44,7 +41,7 @@
              <div class="row">
                  <div class="col-md-6">
                      <div class="column submit">
-                         <img class="pics" src="M2%20Rev.E.jpg" alt="M2 Rev.E">
+                         <img class="pics zoom" src="M2%20Rev_thumb_sm.jpg" alt="M2 Rev.E" data-zoom-image="M2%20Rev_thumb_lg.jpg"/>
                         <h5><strong>Download Firmware for Rev.E Printer</strong></h5>
                     </div>
                      <br>
@@ -55,7 +52,7 @@
 
                  <div class="col-md-6">         
                     <div class="column">
-                        <img class="pics" src="M2%20Rev.E%20Dual.jpg" alt="M2 Rev.E Dual">
+                        <img class="pics zoom" src="M2%20Rev.E%20Dual.jpg" alt="M2 Rev.E Dual" data-zoom-image="RevEDual_lg.jpg">
                         <h5><strong>Download Firmware for Rev.E Dual Printer</strong></h5>
                     </div>
                      <br>
@@ -215,6 +212,13 @@
          </div>        
     </body>
     
-   
+   <!--Import undserscore.js-->       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" ></script>
+<!--Import jquery-->  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--Import elevate-zoom-->  
+        <script src="elevatezoom-master/jquery.elevatezoom.js"></script>
+<!--Import firmware.js-->  
+        <script src="firmware.js" ></script>
     
 </html>
