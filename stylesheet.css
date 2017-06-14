@@ -53,9 +53,17 @@ pre{
 .pics{
     width: 190px;
     height: 140px;
-    padding: 10px;
-    
+    padding: 10px;    
 }
+
+.pics2{
+    
+     width: 290px;
+    height: 140px;
+    padding: 10px; 
+}
+
+
 
 .hepics{
     padding-top: 15px;
