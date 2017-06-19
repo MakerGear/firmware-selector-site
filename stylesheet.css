@@ -1,7 +1,7 @@
 /*css for main page */
 body{
      padding:10px;
-     background-image:url(M2%20background%202.jpg);
+    /* background-image:url(M2%20background%202.jpg);*/
      background-size:cover;
      background-repeat:no-repeat;
      background-attachment: fixed;
@@ -16,6 +16,10 @@ pre{
     text-align: center;
 }
 
+h4{
+    text-decoration: underline;
+}
+
 .z_pic{
     display: block;
     margin: auto;
@@ -28,13 +32,16 @@ pre{
     background: url('MakerGear_Logo');
 }
 
-#greet{
+.greet{
     font-family:"Arial",sans-serif;
+    background-color: #FF6300;
+    text-align: center;
+    padding: 20px;
 }
 
 .header{
     text-align: center;
-
+    font-family:"Arial",sans-serif;
 }
 
 .tutorial{
