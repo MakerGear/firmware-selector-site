@@ -72,6 +72,10 @@
             var revEdv1 = [0,0,0,1,1];
             var revEdv2 = [0,0,0,1,2];
             var revEdgt = [0,0,0,1,3];
+
+// Nonstandard configs
+            var sv4Zm = [1,0,0,0,0]; //Silver,V4,Zmax
+            var bv3bgt = [0,0,1,2,3]; //Black,V3b,Geetech
              
          
        
@@ -138,7 +142,10 @@
          var result30 = _.isEqual(userConfig,revEdv1);
          var result31 = _.isEqual(userConfig,revEdv2);
          var result32 = _.isEqual(userConfig,revEdgt);
-//
+//test results for Non-standard configs:
+         var result33 = _.isEqual(userConfig,sv4Zm);
+         var result34 = _.isEqual(userConfig,bv3bgt);
+         
          
 //run test:
          
@@ -427,6 +434,24 @@
         
                 if(answer){
                     window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";     
+                }
+            else answer = false;
+            }
+         
+         else if(result33){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wikidot.com/local--files/m2-firmware/M2Marlin-11-30-2015%20-%20ZMax.zip";     
+                }
+            else answer = false;
+            }
+         
+         else if(result34){
+            var answer = confirm ("Please click to download your firmware.");
+        
+                if(answer){
+                    window.location="http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2%20Marlin%20-%20Geeetech%20LCD%20-%20Black%20Z%20Motor%20-%2010-19-2015.zip";     
                 }
             else answer = false;
             }
