@@ -462,10 +462,8 @@
 
 
 //Magnify Images
-$(".zoom").elevateZoom({zoomWindowPosition: 4});
-
-$(".zoom1").elevateZoom({zoomWindowPosition: 8});
-$(".zoom2").elevateZoom({zoomWindowPosition: 6});
+$(".zoom1").elevateZoom({zoomWindowPosition: 10});
+$(".zoom2").elevateZoom({zoomWindowPosition: 2});
 
     
      
