@@ -1,18 +1,21 @@
 /*css for main page */
 body{
      padding:10px;
-    /* background-image:url(M2%20background%202.jpg);*/
      background-size:cover;
      background-repeat:no-repeat;
      background-attachment: fixed;
 }
 
 p{
-    font-family:"Arial",sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+h3{
+    font-family: 'Oswald', sans-serif;
 }
 
 pre{
-    font-family:"Arial",sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
 }
 
@@ -33,7 +36,7 @@ h4{
 }
 
 .greet{
-    font-family:"Arial",sans-serif;
+    font-family: 'Oswald', sans-serif;
     background-color: #FF6300;
     text-align: center;
     padding: 20px;
@@ -41,7 +44,7 @@ h4{
 
 .header{
     text-align: center;
-    font-family:"Arial",sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 .tutorial{
