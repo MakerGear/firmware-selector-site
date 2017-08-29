@@ -15,7 +15,7 @@
             var answer = confirm ("Please click to download RevE Dual firmware.");
         
             if(answer){
-            window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2_Dual_Extruder_Marlin.zip";       
+            window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";       
             }
             else answer = false;
       }   
