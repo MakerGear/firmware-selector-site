@@ -15,7 +15,7 @@
             var answer = confirm ("Please click to download RevE Dual firmware.");
         
             if(answer){
-            window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2_Dual_Extruder_Marlin.zip";       
+            window.location="http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";       
             }
             else answer = false;
       }   
@@ -128,10 +128,10 @@
          var result19 = _.isEqual(userConfig,sv4v2);
          var result20 = _.isEqual(userConfig,sv4gt);
 //test results for silver V4 dual section:
-         var result21 = _.isEqual(userConfig,sv4bm);
-         var result22 = _.isEqual(userConfig,sv4v1);
-         var result23 = _.isEqual(userConfig,sv4v2);
-         var result24 = _.isEqual(userConfig,sv4gt);
+         var result21 = _.isEqual(userConfig,sv4dbm);
+         var result22 = _.isEqual(userConfig,sv4dv1);
+         var result23 = _.isEqual(userConfig,sv4dv2);
+         var result24 = _.isEqual(userConfig,sv4dgt);
 //test results for Rev.E section:
          var result25 = _.isEqual(userConfig,revEbm);
          var result26 = _.isEqual(userConfig,revEv1);
