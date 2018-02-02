@@ -1,6 +1,6 @@
 /*css for main page */
 body{
-     padding:10px;
+     padding:;
      background-size:cover;
      background-repeat:no-repeat;
      background-attachment: fixed;
@@ -47,10 +47,13 @@ pre{
     padding: 20px;
 }
 
-.greet{
+.greet2{
     font-family: 'Oswald', sans-serif;
+    background-color: black;
     text-align: center;
     padding: 20px;
+    color: #FF6300;
+}
 }
 
 .header{
@@ -106,8 +109,4 @@ pre{
 
 
 /* css for z_motor.html*/
-.greet2{
-    padding-top: 50px;
-    text-align: center;    
-}
 
