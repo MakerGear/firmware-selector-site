@@ -47,14 +47,29 @@ pre{
     padding: 20px;
 }
 
+.greet{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
 .header{
     text-align: center;
     font-family: 'Oswald', sans-serif;
+    background-color: black;
 }
 
 .tutorial{
     text-align: center;
     padding: 50px;
+}
+
+.tutorial2{
+    text-align: center;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0px;
 }
 
 .column{

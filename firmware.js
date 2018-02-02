@@ -20,6 +20,27 @@
             else answer = false;
       }   
      
+//Gets Arduino 1.5.5 Windows
+
+  function arduino(){
+            var answer = confirm ("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
+        
+            if(answer){
+            window.location="https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-r2-windows.zip";       
+            }
+            else answer = false;
+      } 
+
+//Gets Arduino 1.5.5 MAC
+
+ function arduino2(){
+            var answer = confirm ("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
+        
+            if(answer){
+            window.location="https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-macosx.zip";       
+            }
+            else answer = false;
+      } 
         
                  
          //24v Black Z motor (Rev c and D)
@@ -439,19 +460,19 @@
             }
          
          else if(result33){
-            var answer = confirm ("Please click to download your firmware.");
+             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    window.location="http://makergear.wikidot.com/local--files/m2-firmware/M2Marlin-11-30-2015%20-%20ZMax.zip";     
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
          
          else if(result34){
-            var answer = confirm ("Please click to download your firmware.");
+             var answer = confirm ("Please click to download your firmware.");
         
                 if(answer){
-                    window.location="http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2%20Marlin%20-%20Geeetech%20LCD%20-%20Black%20Z%20Motor%20-%2010-19-2015.zip";     
+                    alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")      
                 }
             else answer = false;
             }
