@@ -66,7 +66,7 @@ function move(direction) {
         document.getElementById(step).style.display = "block";
         document.getElementById(step - 1).style.display = "none";
 
-        next();
+
     } else {
 
         console.log(step)
