@@ -1,114 +1,240 @@
 /*css for main page */
-body{
-     padding:;
-     background-size:cover;
-     background-repeat:no-repeat;
-     background-attachment: fixed;
+
+body {
+    padding: ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-p{
+p {
     font-family: 'Oswald', sans-serif;
 }
 
-h3{
+h3 {
     font-family: 'Oswald', sans-serif;
 }
 
 
-h4{
-    font-family: 'Oswald', sans-serif
-    text-decoration: underline;
+h4 {
+    font-family: 'Oswald', sans-serif text-decoration: underline;
 }
 
-h5{
+h5 {
     font-family: 'Oswald', sans-serif;
 }
 
-pre{
-    font-family: 'Oswald', sans-serif;
-    text-align: center;}
+h5:hover {
+    color: #FF6300;
 
-.z_pic{
-    display: block;
-    margin: auto;
-     height:140px; 
-     width:340px;
+}
+
+span {}
+
+span:hover {
+
+    color: #FF6300;
+
+}
+
+pre {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 
 
-.logo{
+
+.logo {
     background: url('MakerGear_Logo');
 }
 
-.greet{
+.greet {
     font-family: 'Oswald', sans-serif;
-    background-color: #FF6300;
     text-align: center;
     padding: 20px;
-    margin:0px;
+    margin: 0px;
+    color: #626569;
 }
 
-.greet2{
+.greet2 {
     font-family: 'Oswald', sans-serif;
     background-color: black;
     text-align: center;
     padding: 20px;
     color: #FF6300;
- 
+
 }
 
 
-.header{
+.header {
     text-align: center;
     font-family: 'Oswald', sans-serif;
     background-color: black;
 }
 
-.tutorial{
+.tutorial {
     text-align: center;
     padding: 50px;
+
 }
 
-.tutorial2{
-    text-align: center;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 0px;
-}
 
-.column{
-   text-align: center;
-}
-
-.submit{
+.column {
     text-align: center;
 }
 
-.pics{
-    width: 190px;
-    height: 140px;
-    padding: 10px;    
+.submit {
+    text-align: center;
 }
 
-.pics2{
-    
-     width: 290px;
+.pics {
+    width: 170px;
+    height: 120px;
+    padding: 10px;
+}
+
+.pics2 {
+
+    width: 290px;
     height: 140px;
-    padding: 10px; 
+    padding: 10px;
 }
 
 
-
-.hepics{
+.hepics {
     padding-top: 15px;
 }
 
-.selector{
-    
+.selector {
+
     padding-bottom: 50px;
 }
 
+.backArrow {
+    float: right;
+}
 
-/* css for z_motor.html*/
+.nextArrow {
+    float: left;
+}
 
+=======
+/*css for main page */
+
+body {
+    padding: ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p {
+    font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+h4 {
+    font-family: 'Oswald', sans-serif text-decoration: underline;
+}
+
+h5 {
+    font-family: 'Oswald', sans-serif;
+}
+
+h5:hover {
+    color: #FF6300;
+
+}
+
+span {}
+
+span:hover {
+
+    color: #FF6300;
+
+}
+
+pre {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+
+
+.logo {
+    background: url('MakerGear_Logo');
+}
+
+.greet {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+    color: dimgrey;
+}
+
+.greet2 {
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    color: #FF6300;
+
+}
+
+
+.header {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+}
+
+.tutorial {
+    text-align: center;
+    padding: 50px;
+
+}
+
+
+.column {
+    text-align: center;
+}
+
+.submit {
+    text-align: center;
+}
+
+.pics {
+    width: 170px;
+    height: 120px;
+    padding: 10px;
+}
+
+.pics2 {
+
+    width: 290px;
+    height: 140px;
+    padding: 10px;
+}
+
+
+.hepics {
+    padding-top: 15px;
+}
+
+.selector {
+
+    padding-bottom: 50px;
+}
+
+.backArrow {
+    float: right;
+}
+
+.nextArrow {
+    float: left;
+}
