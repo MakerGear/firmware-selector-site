@@ -81,15 +81,10 @@ function move(direction) {
         document.getElementById(step).style.display = "block";
         document.getElementById(step + 1).style.display = "none";
     }
+
 }
 
-
-
-
-//Select Z motor
-
-
-
+//hides step 1
 function stepBack() {
 
     document.getElementById("1").style.display = "none"
@@ -99,7 +94,7 @@ function stepBack() {
 //variables for matchconfig()        
 
 //24v Black Z motor (Rev c and D)
-//V4 (single)section:
+    //V4 (single)section:
 var v4bm = [0, 0, 1, 0, 0]; //Base Model V4 black_z. zmin
 var v4v1 = [0, 0, 1, 0, 1]; //Viki1
 var v4v2 = [0, 0, 1, 0, 2]; //Viki2
@@ -175,266 +170,209 @@ function matchConfig() {
     var lcd = document.getElementById("lcd");
     var s5 = parseInt(lcd.selectedIndex);
 
-    console.log(s4);
-
-
-    //result of user selection compiles here :
     var userConfig = [s1, s2, s3, s4, s5];
 
-    //test result for black Z single V4 section:         
-    var result1 = _.isEqual(userConfig, v4bm);
-    var result2 = _.isEqual(userConfig, v4v1);
-    var result3 = _.isEqual(userConfig, v4v2);
-    var result4 = _.isEqual(userConfig, v4gt);
-    //test result for black Z dual V4 section:
-    var result5 = _.isEqual(userConfig, v4dbm);
-    var result6 = _.isEqual(userConfig, v4dv1);
-    var result7 = _.isEqual(userConfig, v4dv2);
-    var result8 = _.isEqual(userConfig, v4dgt);
-    //test result for black Z single V3B section: 
-    var result9 = _.isEqual(userConfig, v3bbm);
-    var result10 = _.isEqual(userConfig, v3bv1);
-    var result11 = _.isEqual(userConfig, v3bv2);
-    var result12 = _.isEqual(userConfig, v3bgt);
-    //test results for silver V3b section:
-    var result13 = _.isEqual(userConfig, sv3bbm);
-    var result14 = _.isEqual(userConfig, sv3bv1);
-    var result15 = _.isEqual(userConfig, sv3bv2);
-    var result16 = _.isEqual(userConfig, sv3bgt);
-    //test results for silver V4 section:
-    var result17 = _.isEqual(userConfig, sv4bm);
-    var result18 = _.isEqual(userConfig, sv4v1);
-    var result19 = _.isEqual(userConfig, sv4v2);
-    var result20 = _.isEqual(userConfig, sv4gt);
-    //test results for silver V4 dual section:
-    var result21 = _.isEqual(userConfig, sv4dbm);
-    var result22 = _.isEqual(userConfig, sv4dv1);
-    var result23 = _.isEqual(userConfig, sv4dv2);
-    var result24 = _.isEqual(userConfig, sv4dgt);
-    //test results for Rev.E section:
-    var result25 = _.isEqual(userConfig, revEbm);
-    var result26 = _.isEqual(userConfig, revEv1);
-    var result27 = _.isEqual(userConfig, revEv2);
-    var result28 = _.isEqual(userConfig, revEgt);
-    //test results for Rev.E dual section:
-    var result29 = _.isEqual(userConfig, revEdbm);
-    var result30 = _.isEqual(userConfig, revEdv1);
-    var result31 = _.isEqual(userConfig, revEdv2);
-    var result32 = _.isEqual(userConfig, revEdgt);
-    //test results for Non-standard configs:
-    var result33 = _.isEqual(userConfig, sv4Zm);
-    var result34 = _.isEqual(userConfig, bv3bgt);
+    var masterArray = [v4bm, v4v1, v4v2, v4gt, v4dbm, v4dv1, v4dv2, v4dgt, v3bbm, v3bv1, v3bv2, v3bgt,
+                   sv3bbm, sv3bv1, sv3bv2, sv3bgt, sv4bm, sv4v1, sv4v2, sv4gt, sv4dbm, sv4dv1, sv4dv2, sv4dgt,
+                   revEbm, revEv1, revEv2, revEgt, revEdbm, revEdv1, revEdv2, revEdgt, sv4Zm, bv3bgt];
+
+    var match;
+
+    for (var a = 0; a < masterArray.length; a++) {
+
+        var pass = true;
+
+        for (var b = 0; b < userConfig.length; b++) {
+
+            if (masterArray[a][b] !== userConfig[b]) {
+
+                pass = false;
+
+            }
+        }
+        if (pass == true) {
+            match = a;
+        }
+    }
 
 
     //run test:
 
-    if (result1) {
-
-        var answer = confirm("Please click to download your firmware.");
-
+    var answer;
+    if (match == 0) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-11-30-2015.zip";
         } else answer = false;
-
-    } else if (result2) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 1) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_24Vw24Vheater.zip";
         } else answer = false;
-    } else if (result3) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 2) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result4) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 3) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2%20Marlin%20-%20Geeetech%20LCD%20-%20Black%20Z%20Motor%20-%2010-19-2015.zip";
         } else answer = false;
-    } else if (result5) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 4) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2_Dual_Extruder_Marlin_Black_Z_Motor.zip";
         } else answer = false;
-    } else if (result6) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 5) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result7) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 6) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result8) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 7) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result9) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 8) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-11-30-2015.zip";
         } else answer = false;
-    } else if (result10) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 9) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_24Vw24Vheater.zip";
         } else answer = false;
-    } else if (result11) {
-        var answer = confirm("Please click to download your firmware.");
 
+    } else if (match == 10) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result12) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 11) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result13) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 12) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin24r2.zip";
         } else answer = false;
-    } else if (result14) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 13) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_942013.zip";
         } else answer = false;
-    } else if (result15) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 14) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result16) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 15) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = " http://makergear.wikidot.com/local--files/m2-lcd-panel/M2_Marlin_RRDSC_v1.0.zip";
         } else answer = false;
-    } else if (result17) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 16) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = " http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-01-14-2016-OriginalZMotor.zip";
         } else answer = false;
-    } else if (result18) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 17) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_24Vw24Vheater.zip";
         } else answer = false;
-    } else if (result19) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 18) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result20) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 19) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wikidot.com/local--files/m2-lcd-panel/M2_Marlin_RRDSC_v1.0.zip";
         } else answer = false;
-    } else if (result21) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 20) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2_Dual_Extruder_Marlin.zip";
         } else answer = false;
-    } else if (result22) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 21) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result23) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 22) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result24) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 23) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result25) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 24) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";
         } else answer = false;
-    } else if (result26) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 25) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result27) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 26) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result28) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 27) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";
         } else answer = false;
-    } else if (result29) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 28) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";
         } else answer = false;
-    } else if (result30) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 29) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V104%20-%20Dual%20-%20Viki.zip";
         } else answer = false;
-    } else if (result31) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 30) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result32) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 31) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";
         } else answer = false;
-    } else if (result33) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 32) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
-    } else if (result34) {
-        var answer = confirm("Please click to download your firmware.");
-
+    } else if (match == 33) {
+        answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ")
-        } else answer = false;
-    } else alert("Your printer configuration appears to be non-standard. Please contact support@makergear.com")
+            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+        }
+    } else
+
+        alert("Please contact support@makergear.com");
 
 }
 
@@ -443,6 +381,7 @@ function matchConfig() {
 $(".zoom1").elevateZoom({
     zoomWindowPosition: 10
 });
+
 $(".zoom2").elevateZoom({
     zoomWindowPosition: 2
 });
