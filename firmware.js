@@ -212,7 +212,7 @@ function matchConfig() {
     } else if (match == 2) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 3) {
         answer = confirm("Please click to download your firmware.");
@@ -227,17 +227,17 @@ function matchConfig() {
     } else if (match == 5) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 6) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 7) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 8) {
         answer = confirm("Please click to download your firmware.");
@@ -253,12 +253,12 @@ function matchConfig() {
     } else if (match == 10) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 11) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 12) {
         answer = confirm("Please click to download your firmware.");
@@ -273,7 +273,7 @@ function matchConfig() {
     } else if (match == 14) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 15) {
         answer = confirm("Please click to download your firmware.");
@@ -293,7 +293,7 @@ function matchConfig() {
     } else if (match == 18) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 19) {
         answer = confirm("Please click to download your firmware.");
@@ -308,17 +308,17 @@ function matchConfig() {
     } else if (match == 21) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 22) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 23) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 24) {
         answer = confirm("Please click to download your firmware.");
@@ -328,12 +328,12 @@ function matchConfig() {
     } else if (match == 25) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 26) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 27) {
         answer = confirm("Please click to download your firmware.");
@@ -353,7 +353,7 @@ function matchConfig() {
     } else if (match == 30) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 31) {
         answer = confirm("Please click to download your firmware.");
@@ -363,12 +363,12 @@ function matchConfig() {
     } else if (match == 32) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 33) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Your printer configuration appears to be non-standard. Please contact support.makergear.com and they may be able to help you. ");
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         }
     } else
 
