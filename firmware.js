@@ -17,9 +17,7 @@ function addEventListener(){
     else if(document.getElementById('stp4F').addEventListener("click", function(){move('forward')}, false));
     else if(document.getElementById('stp5B').addEventListener("click", move, false));
     //get firmware
-    else if(document.getElementById('match').addEventListener("click", matchConfig, false));
-    
-    
+    else if(document.getElementById('match').addEventListener("click", matchConfig, false)); 
 }
 //gets RevE download
 function revE() {
