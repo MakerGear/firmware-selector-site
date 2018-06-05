@@ -1,3 +1,26 @@
+
+function addEventListener(){
+    //top section
+    if(document.getElementById('ard1').addEventListener("click", arduino, false));
+    else if(document.getElementById('ard2').addEventListener("click", arduino2, false));
+    else if(document.getElementById('revE').addEventListener("click", revE, false));
+    else if(document.getElementById('revEdual').addEventListener("click", dual, false));
+    //selector direction arrows
+    else if(document.getElementById('stp1').addEventListener("click", step1, false)); 
+    else if(document.getElementById('stp1B').addEventListener("click", stepBack, false));
+    else if(document.getElementById('stp1F').addEventListener("click", function(){move('forward')}, false));
+    else if(document.getElementById('stp2B').addEventListener("click", move, false));
+    else if(document.getElementById('stp2F').addEventListener("click", function(){move('forward')}, false));
+    else if(document.getElementById('stp3B').addEventListener("click", move, false));
+    else if(document.getElementById('stp3F').addEventListener("click", function(){move('forward')}, false));
+    else if(document.getElementById('stp4B').addEventListener("click", move, false));
+    else if(document.getElementById('stp4F').addEventListener("click", function(){move('forward')}, false));
+    else if(document.getElementById('stp5B').addEventListener("click", move, false));
+    //get firmware
+    else if(document.getElementById('match').addEventListener("click", matchConfig, false));
+    
+    
+}
 //gets RevE download
 function revE() {
     var answer = confirm("Please click to download RevE firmware.");
