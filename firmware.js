@@ -92,6 +92,7 @@ function move(direction) {
         }
     else if(direction == "forward" && step > 5){
         matchConfig();
+        step = 5;
         }
     }
 
