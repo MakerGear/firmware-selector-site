@@ -5,7 +5,7 @@ function addEventListener(){
     document.getElementById('ard2').addEventListener("click", arduino2, false);
     document.getElementById('revE').addEventListener("click", revE, false);
     document.getElementById('revEdual').addEventListener("click", dual, false);
-    document.getElementById('revF').addEventListener("click")
+    document.getElementById('revF').addEventListener("click", revf, false);
     //opens selector
     document.getElementById('stp1').addEventListener("click", step1, false); 
      //selector direction arrows   
@@ -35,13 +35,12 @@ function dual() {
 }
 
 //gets Rev.F download
-function revF(){
-        var answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location = "http://setup.makergear.com/misc/M2E-Production-nr1E2-V110.zip";
-        } else answer = false;
+function revf() {
+    var answer = confirm("Please click to download RevF firmware.");
 
-    
+    if (answer) {
+        window.location = "http://setup.makergear.com/misc/M2E-Production-nr1E2-V110.zip";
+    } else answer = false;
 }
 
 //Gets Arduino 1.5.5 Windows
@@ -178,7 +177,7 @@ var revEdgt = [0, 0, 0, 1, 3];
 // Nonstandard configs
 var sv4Zm = [1, 0, 0, 0, 0]; //Silver,V4,Zmax
 var bv3bgt = [0, 0, 1, 2, 3]; //Black,V3b,Geetech
-var revF = [0,0,0,2,0]; //Rev F Firmware
+var revF = [0,0,0,3,0]; //Rev F Firmware
 
 
 
@@ -405,14 +404,8 @@ function matchConfig() {
         }
     } 
     else if (match == 34) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location = "http://setup.makergear.com/misc/M2E-Production-nr1E2-V110.zip";
-        } else answer = false;
-
-        alert("Please contact support@makergear.com");
-
-}
+            revf();
+    }
 }
 
 //Magnify Images
