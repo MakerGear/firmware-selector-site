@@ -8,13 +8,7 @@ function addEventListener(){
     document.getElementById('revF').addEventListener("click", revf, false);
     //opens selector
     document.getElementById('stp1').addEventListener("click", step1, false); 
-     //selector direction arrows   
-    //document.getElementById('back').addEventListener("click", function(){move('back')}, false);
-    //document.getElementById('forward').addEventListener("click", function(){move('forward')}, false);
 
-    //document.getElementById('stp5B').addEventListener("click", move, false);
-    //get firmware
-    //document.getElementById('match').addEventListener("click", matchConfig, false); 
 }
 //gets RevE download
 function revE() {
@@ -88,7 +82,6 @@ function move(direction) {
         if(step <=5){
         document.getElementById(step).style.display = "block";
         document.getElementById(step - 1).style.display = "none";
-        console.log(step);
         }
     else if(direction == "forward" && step > 5){
         matchConfig();
@@ -111,7 +104,6 @@ function move(direction) {
         else step = step - 1
             document.getElementById(step).style.display = "block";
             document.getElementById(step + 1).style.display = "none";
-            console.log(step);
         
     }
 }
