@@ -102,6 +102,11 @@ function move(direction) {
             if( step <= 1){
                 return;
             }
+            else if (step < 1){
+            document.getElementById("1").style.display = "none";
+            document.getElementById("arrows").style.display = "none";
+                
+            }
       
         else step = step - 1
             document.getElementById(step).style.display = "block";
@@ -407,6 +412,7 @@ function matchConfig() {
     else if (match == 34) {
             revf();
     }
+    else alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
 }
 
 //Magnify Images
