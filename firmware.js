@@ -1,23 +1,20 @@
 
 function addEventListener(){
     //top section
-    if(document.getElementById('ard1').addEventListener("click", arduino, false));
-    else if(document.getElementById('ard2').addEventListener("click", arduino2, false));
-    else if(document.getElementById('revE').addEventListener("click", revE, false));
-    else if(document.getElementById('revEdual').addEventListener("click", dual, false));
-    //selector direction arrows
-    else if(document.getElementById('stp1').addEventListener("click", step1, false)); 
-    else if(document.getElementById('stp1B').addEventListener("click", stepBack, false));
-    else if(document.getElementById('stp1F').addEventListener("click", function(){move('forward')}, false));
-    else if(document.getElementById('stp2B').addEventListener("click", move, false));
-    else if(document.getElementById('stp2F').addEventListener("click", function(){move('forward')}, false));
-    else if(document.getElementById('stp3B').addEventListener("click", move, false));
-    else if(document.getElementById('stp3F').addEventListener("click", function(){move('forward')}, false));
-    else if(document.getElementById('stp4B').addEventListener("click", move, false));
-    else if(document.getElementById('stp4F').addEventListener("click", function(){move('forward')}, false));
-    else if(document.getElementById('stp5B').addEventListener("click", move, false));
+    document.getElementById('ard1').addEventListener("click", arduino, false);
+    document.getElementById('ard2').addEventListener("click", arduino2, false);
+    document.getElementById('revE').addEventListener("click", revE, false);
+    document.getElementById('revEdual').addEventListener("click", dual, false);
+    document.getElementById('revF').addEventListener("click")
+    //opens selector
+    document.getElementById('stp1').addEventListener("click", step1, false); 
+     //selector direction arrows   
+    //document.getElementById('back').addEventListener("click", function(){move('back')}, false);
+    //document.getElementById('forward').addEventListener("click", function(){move('forward')}, false);
+
+    //document.getElementById('stp5B').addEventListener("click", move, false);
     //get firmware
-    else if(document.getElementById('match').addEventListener("click", matchConfig, false)); 
+    //document.getElementById('match').addEventListener("click", matchConfig, false); 
 }
 //gets RevE download
 function revE() {
@@ -35,6 +32,16 @@ function dual() {
     if (answer) {
         window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";
     } else answer = false;
+}
+
+//gets Rev.F download
+function revF(){
+        var answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            window.location = "http://setup.makergear.com/misc/M2E-Production-nr1E2-V110.zip";
+        } else answer = false;
+
+    
 }
 
 //Gets Arduino 1.5.5 Windows
@@ -62,48 +69,51 @@ function arduino2() {
 function step1() {
 
     document.getElementById("1").style.display = "block";
+    document.getElementById("arrows").style.display = "block";
 }
+
 
 
 var step = 1;
 
-
 function move(direction) {
 
     if (direction == undefined) {
-
-        console.log("move function called without direction returning")
-        return
-    } else if (direction == "forward") {
-
-
-        if (step >= 5) {
-            return
-        } else {
-            step = step + 1;
-
+        console.log("move function called without direction returning");
+        return;
         }
-
+    
+    //move forward
+    else if (direction == "forward" && step <= 5) {
+        step = step + 1;
+        if(step <=5){
         document.getElementById(step).style.display = "block";
         document.getElementById(step - 1).style.display = "none";
-
-
-    } else {
-
-        console.log(step)
-
-
-        if (step <= 1) {
-            return
-        } else {
-            (step = step - 1);
-
+        console.log(step);
         }
-        document.getElementById(step).style.display = "block";
-        document.getElementById(step + 1).style.display = "none";
+    else if(direction == "forward" && step > 5){
+        matchConfig();
+        }
     }
 
+    //move back
+        
+    else if (direction == "back") {
+            if( step <= 1){
+                return;
+            }
+      
+        else step = step - 1
+            document.getElementById(step).style.display = "block";
+            document.getElementById(step + 1).style.display = "none";
+            console.log(step);
+        
+    }
 }
+    
+
+
+
 
 //hides step 1
 function stepBack() {
@@ -168,6 +178,8 @@ var revEdgt = [0, 0, 0, 1, 3];
 // Nonstandard configs
 var sv4Zm = [1, 0, 0, 0, 0]; //Silver,V4,Zmax
 var bv3bgt = [0, 0, 1, 2, 3]; //Black,V3b,Geetech
+var revF = [0,0,0,2,0]; //Rev F Firmware
+
 
 
 
@@ -195,7 +207,7 @@ function matchConfig() {
 
     var masterArray = [v4bm, v4v1, v4v2, v4gt, v4dbm, v4dv1, v4dv2, v4dgt, v3bbm, v3bv1, v3bv2, v3bgt,
                    sv3bbm, sv3bv1, sv3bv2, sv3bgt, sv4bm, sv4v1, sv4v2, sv4gt, sv4dbm, sv4dv1, sv4dv2, sv4dgt,
-                   revEbm, revEv1, revEv2, revEgt, revEdbm, revEdv1, revEdv2, revEdgt, sv4Zm, bv3bgt];
+                   revEbm, revEv1, revEv2, revEgt, revEdbm, revEdv1, revEdv2, revEdgt, sv4Zm, bv3bgt, revF];
 
     var match;
 
@@ -391,12 +403,17 @@ function matchConfig() {
         if (answer) {
             alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         }
-    } else
+    } 
+    else if (match == 34) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            window.location = "http://setup.makergear.com/misc/M2E-Production-nr1E2-V110.zip";
+        } else answer = false;
 
         alert("Please contact support@makergear.com");
 
 }
-
+}
 
 //Magnify Images
 $(".zoom1").elevateZoom({

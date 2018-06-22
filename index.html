@@ -57,7 +57,7 @@
     <!--Rev.E-->
     <div class=" tutorial">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="column submit">
                     <img class=" pics" src="M2%20Rev_thumb_lg_fix.jpg" alt="M2 Rev.E" />
                     <br>
@@ -69,7 +69,7 @@
 
             </div>
     <!--Rev.E Dual-->
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="column">
                     <img class="pics" src="M2%20Rev.E%20Dual.jpg" alt="M2 Rev.E Dual">
                     <br>
@@ -78,7 +78,16 @@
                     <h5 id="revEdual">Download Firmware for Rev.E Dual Printer</h5>
                 </div>
                 <br>
-
+            </div>
+            <div class="col-md-4">
+                <div class="column">
+                    <img class="pics" src="rev_f_extruder.jpg" alt="Rev.F Extruder Assembly" data-zoom-image="rev_f_extruder.jpg">
+                    <br>
+                    <br>
+                    <br>
+                    <h5 id="revf">Download Firmware for Rev.F Printer</h5>
+                </div>
+                <br>
             </div>
         </div>
     </div>
@@ -114,15 +123,9 @@
                     </select>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h3><span id="stp1B" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
-            </div>
-            <div class="col-md-6">
-                <h3><span id="stp1F" class="nextArrow glyphicon glyphicon-arrow-right"></span></h3>
-            </div>
-        </div>
     </div>
+
+
 
 
 
@@ -140,6 +143,7 @@
                     </select>
             </div>
         </div>
+<!--
         <div class="row">
             <div class="col-md-6">
                 <h3><span id="stp2B" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
@@ -148,6 +152,7 @@
                 <h3><span id="stp2F" class="nextArrow glyphicon glyphicon-arrow-right"></span></h3>
             </div>
         </div>
+-->
     </div>
 
 
@@ -167,6 +172,7 @@
                     </select>
             </div>
         </div>
+<!--
         <div class="row">
             <div class="col-md-6">
                 <h3><span id="stp3B" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
@@ -175,6 +181,7 @@
                 <h3><span id="stp3F" class="nextArrow glyphicon glyphicon-arrow-right"></span></h3>
             </div>
         </div>
+-->
     </div>
 
 
@@ -183,27 +190,24 @@
         <div class="row column">
             <div class="col-md-12">
                 <h3><strong>Select your Hotend</strong></h3>
-                <pre><strong>V4 Hot End                             V3B HotEnd</strong></pre>
+                <pre><strong>V4 Hot End                                          V3B HotEnd                                           Rev.F     </strong></pre>
                 <div>
                     <img class="pics zoom1" src="v4_lg.jpg" alt="V4 Hotend" data-zoom-image="v4_lg.jpg">
                     <img class="pics zoom1" src="v3b_lg.jpg" alt="V3B Hotend" data-zoom-image="v3b_lg.jpg">
+                    <img class="pics zoom1" src="rev_f_extruder.jpg" alt="Rev.F Extruder Assembly" data-zoom-image="rev_f_extruder.jpg">
                 </div>
                 <select id="hotend" name="hotend">
                         <option value="v4">V4 Hotend</option>
                         <option value="v4d">V4 Hotend (Dual)</option>
                         <option value="v3b">v3b Hotend</option>
+                        <option value="rvf">Rev.F</option>
                     </select>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h3><span id="stp4B" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
-            </div>
-            <div class="col-md-6">
-                <h3><span id="stp4F" class="nextArrow glyphicon glyphicon-arrow-right"></span></h3>
-            </div>
-        </div>
     </div>
+    
+    
+
 
 
     <!--Step 5-->
@@ -226,6 +230,8 @@
                         </select>
                 </div>
             </div>
+            
+<!--
             <div class="row">
                 <div class="col-md-6">
                     <h3><span id="stp5B" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
@@ -233,6 +239,17 @@
                 <div class="col-md-6">
                     <h3><span id="match" class="nextArrow glyphicon glyphicon-arrow-right"></span></h3>
                 </div>
+            </div>
+-->
+        </div>
+    </div>
+        <div id="arrows" class="selector" style="display: none;">
+        <div class="row">
+            <div class="col-md-6">
+                <h3><span id="back" onclick="move('back')" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
+            </div>
+            <div class="col-md-6">
+                <h3><span id="forward" onclick="move('forward')" class="nextArrow glyphicon glyphicon-arrow-right"></span></h3>
             </div>
         </div>
     </div>
@@ -246,5 +263,6 @@
 <script type="application/javascript" src="firmware.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script> window.onload = addEventListener;</script>
 </body>
 </html>
