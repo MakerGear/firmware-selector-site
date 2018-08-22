@@ -33,7 +33,7 @@ function revf() {
     var answer = confirm("Please click to download RevF firmware.");
 
     if (answer) {
-        window.location = "http://setup.makergear.com/misc/M2E-Production-nr1E2-V110.zip";
+        window.location = "https://github.com/MakerGear/m2firmware/archive/AQB3f.zip";
     } else answer = false;
 }
 
@@ -222,6 +222,7 @@ function matchConfig() {
         }
         if (pass == true) {
             match = a;
+            console.log(match);
         }
     }
 
@@ -373,7 +374,7 @@ function matchConfig() {
     } else if (match == 28) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";
+            window.location = "http://setup.makergear.com/misc/M2E-Production-nr1E2-V110.zip";
         } else answer = false;
     } else if (match == 29) {
         answer = confirm("Please click to download your firmware.");
