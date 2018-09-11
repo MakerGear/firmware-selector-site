@@ -3,6 +3,7 @@ function addEventListener(){
     //top section
     document.getElementById('ard1').addEventListener("click", arduino, false);
     document.getElementById('ard2').addEventListener("click", arduino2, false);
+    document.getElementById('ard3').addEventListener("click", arduino3, false);
     document.getElementById('revE').addEventListener("click", revE, false);
     document.getElementById('revEdual').addEventListener("click", dual, false);
     document.getElementById('revF').addEventListener("click", revf, false);
@@ -12,7 +13,7 @@ function addEventListener(){
 }
 //gets RevE download
 function revE() {
-    var answer = confirm("Please click to download RevE firmware.");
+    const answer = confirm("Please click to download RevE firmware.");
 
     if (answer) {
         window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";
@@ -21,7 +22,7 @@ function revE() {
 
 //gets RevE Dual download
 function dual() {
-    var answer = confirm("Please click to download RevE Dual firmware.");
+    const answer = confirm("Please click to download RevE Dual firmware.");
 
     if (answer) {
         window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";
@@ -30,7 +31,7 @@ function dual() {
 
 //gets Rev.F download
 function revf() {
-    var answer = confirm("Please click to download RevF firmware.");
+    const answer = confirm("Please click to download RevF firmware.");
 
     if (answer) {
         window.location = "https://github.com/MakerGear/m2firmware/archive/AQB3f.zip";
@@ -40,7 +41,7 @@ function revf() {
 //Gets Arduino 1.5.5 Windows
 
 function arduino() {
-    var answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
+    const answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
 
     if (answer) {
         window.location = "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-r2-windows.zip";
@@ -50,10 +51,20 @@ function arduino() {
 //Gets Arduino 1.5.5 MAC
 
 function arduino2() {
-    var answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
+    const answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
 
     if (answer) {
         window.location = "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-macosx.zip";
+    } else answer = false;
+}
+
+//Gets Arduino 1.5.5 Linux 64 bit
+
+function arduino3() {
+    const answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
+
+    if (answer) {
+        window.location = "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-linux64.tgz";
     } else answer = false;
 }
 
@@ -79,6 +90,7 @@ function move(direction) {
     //move forward
     else if (direction == "forward" && step <= 5) {
         step = step + 1;
+        
         if(step <=5){
         document.getElementById(step).style.display = "block";
         document.getElementById(step - 1).style.display = "none";
@@ -86,26 +98,26 @@ function move(direction) {
     else if(direction == "forward" && step > 5){
         matchConfig();
         step = 5;
+        
         }
     }
 
     //move back
         
     else if (direction == "back") {
-            if( step <= 1){
-                return;
-            }
-            else if (step < 1){
+
+        if (step <= 1){
             document.getElementById("1").style.display = "none";
             document.getElementById("arrows").style.display = "none";
                 
             }
       
-        else step = step - 1
+        else if (step = step - 1){
             document.getElementById(step).style.display = "block";
             document.getElementById(step + 1).style.display = "none";
-        
+        }
     }
+    console.log(step);
 }
     
 
@@ -119,63 +131,63 @@ function stepBack() {
 
 }
 
-//variables for matchconfig()        
+//constiables for matchconfig()        
 
 //24v Black Z motor (Rev c and D)
     //V4 (single)section:
-var v4bm = [0, 0, 1, 0, 0]; //Base Model V4 black_z. zmin
-var v4v1 = [0, 0, 1, 0, 1]; //Viki1
-var v4v2 = [0, 0, 1, 0, 2]; //Viki2
-var v4gt = [0, 0, 1, 0, 3]; //Geetech
+const v4bm = [0, 0, 1, 0, 0]; //Base Model V4 black_z. zmin
+const v4v1 = [0, 0, 1, 0, 1]; //Viki1
+const v4v2 = [0, 0, 1, 0, 2]; //Viki2
+const v4gt = [0, 0, 1, 0, 3]; //Geetech
 
 //V4 dual section:
-var v4dbm = [0, 0, 1, 1, 0]; //V4 Dual Base Model
-var v4dv1 = [0, 0, 1, 1, 1]; //Viki1 not supported
-var v4dv2 = [0, 0, 1, 1, 2]; //Viki2 not supported
-var v4dgt = [0, 0, 1, 1, 3]; // Geetech not supported
+const v4dbm = [0, 0, 1, 1, 0]; //V4 Dual Base Model
+const v4dv1 = [0, 0, 1, 1, 1]; //Viki1 not supported
+const v4dv2 = [0, 0, 1, 1, 2]; //Viki2 not supported
+const v4dgt = [0, 0, 1, 1, 3]; // Geetech not supported
 
 //V3b section:
-var v3bbm = [0, 0, 0, 2, 0]; //Base model
-var v3bv1 = [0, 0, 0, 2, 1]; //Viki1
-var v3bv2 = [0, 0, 0, 2, 2]; //Viki2
-var v3bgt = [0, 0, 0, 2, 3]; //Geetech
+const v3bbm = [0, 0, 0, 2, 0]; //Base model
+const v3bv1 = [0, 0, 0, 2, 1]; //Viki1
+const v3bv2 = [0, 0, 0, 2, 2]; //Viki2
+const v3bgt = [0, 0, 0, 2, 3]; //Geetech
 
 //Silver z motor section 
 //Silver V3b section:	
-var sv3bbm = [1, 0, 1, 2, 0]; //Base Model:
-var sv3bv1 = [1, 0, 1, 2, 1]; //Viki1
-var sv3bv2 = [1, 0, 1, 2, 2]; //Viki2
-var sv3bgt = [1, 0, 1, 2, 3]; //Geetech
+const sv3bbm = [1, 0, 1, 2, 0]; //Base Model:
+const sv3bv1 = [1, 0, 1, 2, 1]; //Viki1
+const sv3bv2 = [1, 0, 1, 2, 2]; //Viki2
+const sv3bgt = [1, 0, 1, 2, 3]; //Geetech
 
 //Silver V4 section:
-var sv4bm = [1, 0, 1, 0, 0]; //Base Model:
-var sv4v1 = [1, 0, 1, 0, 1]; //Viki1
-var sv4v2 = [1, 0, 1, 0, 2]; //Viki2
-var sv4gt = [1, 0, 1, 0, 3]; //Geetech
+const sv4bm = [1, 0, 1, 0, 0]; //Base Model:
+const sv4v1 = [1, 0, 1, 0, 1]; //Viki1
+const sv4v2 = [1, 0, 1, 0, 2]; //Viki2
+const sv4gt = [1, 0, 1, 0, 3]; //Geetech
 
 //V4 Dual section:
-var sv4dbm = [1, 0, 1, 1, 0]; //Base Model
-var sv4dv1 = [1, 0, 1, 1, 1]; //Viki1 not supported
-var sv4dv2 = [1, 0, 1, 1, 2]; //Viki2 not supported
-var sv4dgt = [1, 0, 1, 1, 3]; //Geetech not supported
+const sv4dbm = [1, 0, 1, 1, 0]; //Base Model
+const sv4dv1 = [1, 0, 1, 1, 1]; //Viki1 not supported
+const sv4dv2 = [1, 0, 1, 1, 2]; //Viki2 not supported
+const sv4dgt = [1, 0, 1, 1, 3]; //Geetech not supported
 
 //Rev.E section    
 //Rev.E section
-var revEbm = [0, 0, 0, 0, 0]; //Rev.E Base Model
-var revEv1 = [0, 0, 0, 0, 1]; //Viki1
-var revEv2 = [0, 0, 0, 0, 2]; //Viki2
-var revEgt = [0, 0, 0, 0, 3]; //Geetech
+const revEbm = [0, 0, 0, 0, 0]; //Rev.E Base Model
+const revEv1 = [0, 0, 0, 0, 1]; //Viki1
+const revEv2 = [0, 0, 0, 0, 2]; //Viki2
+const revEgt = [0, 0, 0, 0, 3]; //Geetech
 
 //Rev.E Dual section
-var revEdbm = [0, 0, 0, 1, 0];
-var revEdv1 = [0, 0, 0, 1, 1];
-var revEdv2 = [0, 0, 0, 1, 2];
-var revEdgt = [0, 0, 0, 1, 3];
+const revEdbm = [0, 0, 0, 1, 0];
+const revEdv1 = [0, 0, 0, 1, 1];
+const revEdv2 = [0, 0, 0, 1, 2];
+const revEdgt = [0, 0, 0, 1, 3];
 
 // Nonstandard configs
-var sv4Zm = [1, 0, 0, 0, 0]; //Silver,V4,Zmax
-var bv3bgt = [0, 0, 1, 2, 3]; //Black,V3b,Geetech
-var revF = [0,0,0,3,0]; //Rev F Firmware
+const sv4Zm = [1, 0, 0, 0, 0]; //Silver,V4,Zmax
+const bv3bgt = [0, 0, 1, 2, 3]; //Black,V3b,Geetech
+const revF = [0,0,0,3,0]; //Rev F Firmware
 
 
 
@@ -185,34 +197,34 @@ var revF = [0,0,0,3,0]; //Rev F Firmware
 function matchConfig() {
 
 
-    var zmotor = document.getElementById("z_motor");
-    var s1 = parseInt(zmotor.selectedIndex);
+    const zmotor = document.getElementById("z_motor");
+    let s1 = parseInt(zmotor.selectedIndex);
 
-    var psupply = document.getElementById("p_supply");
-    var s2 = parseInt(psupply.selectedIndex);
+    const psupply = document.getElementById("p_supply");
+    let s2 = parseInt(psupply.selectedIndex);
 
-    var endstop = document.getElementById("z_stop");
-    var s3 = parseInt(endstop.selectedIndex);
+    const endstop = document.getElementById("z_stop");
+    let s3 = parseInt(endstop.selectedIndex);
 
-    var hotend = document.getElementById("hotend");
-    var s4 = parseInt(hotend.selectedIndex);
+    const hotend = document.getElementById("hotend");
+    let s4 = parseInt(hotend.selectedIndex);
 
-    var lcd = document.getElementById("lcd");
-    var s5 = parseInt(lcd.selectedIndex);
+    const lcd = document.getElementById("lcd");
+    let s5 = parseInt(lcd.selectedIndex);
 
-    var userConfig = [s1, s2, s3, s4, s5];
+   const userConfig = [s1, s2, s3, s4, s5];
 
-    var masterArray = [v4bm, v4v1, v4v2, v4gt, v4dbm, v4dv1, v4dv2, v4dgt, v3bbm, v3bv1, v3bv2, v3bgt,
+    const masterArray = [v4bm, v4v1, v4v2, v4gt, v4dbm, v4dv1, v4dv2, v4dgt, v3bbm, v3bv1, v3bv2, v3bgt,
                    sv3bbm, sv3bv1, sv3bv2, sv3bgt, sv4bm, sv4v1, sv4v2, sv4gt, sv4dbm, sv4dv1, sv4dv2, sv4dgt,
                    revEbm, revEv1, revEv2, revEgt, revEdbm, revEdv1, revEdv2, revEdgt, sv4Zm, bv3bgt, revF];
 
     var match;
 
-    for (var a = 0; a < masterArray.length; a++) {
+    for (let a = 0; a < masterArray.length; a++) {
 
-        var pass = true;
+        let pass = true;
 
-        for (var b = 0; b < userConfig.length; b++) {
+        for (let b = 0; b < userConfig.length; b++) {
 
             if (masterArray[a][b] !== userConfig[b]) {
 
@@ -229,7 +241,7 @@ function matchConfig() {
 
     //run test:
 
-    var answer;
+    let answer;
     if (match == 0) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {

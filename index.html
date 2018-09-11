@@ -7,8 +7,7 @@
     <title>Firmware Selector</title>
 
     <!--Import bootstrap.css-->
-   
-    <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist\js\bootstrap.js">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!--Import font-->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -24,7 +23,6 @@
     <div>
         <h2 class="greet"><strong>MakerGear Firmware Selector</strong></h2>
     </div>
-    <br>
     <!--Tutorial Video-->
     <div class="row tutorial">
         <div class="col-md-12">
@@ -37,63 +35,32 @@
     </div>
     <!--Arduino-->
     <div class="row tutorial">
-        <div class="col-md-6">
-            <div id="ard1">
+        <div class="col-md-4">
+            <div id="ard1" style="float: right">
                 <img class="pics" src="Arduino_logo.png">
                 <h5>
                     <center>Download Arduino 1.5.5 (Windows)</center>
                 </h5>
             </div>
         </div>
-        <div id="ard2" class="col-md-6">
+        <div id="ard2" class="col-md-4">
             <img class="pics" src="Arduino_logo.png">
             <h5>
                 <center>Download Arduino 1.5.5 (Mac)</center>
             </h5>
         </div>
-    </div>
-    <br>
-    <br>
-    <!--Rev.E-->
-    <div class=" tutorial">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="column submit">
-                    <img class=" pics" src="M2%20Rev_thumb_lg_fix.jpg" alt="M2 Rev.E" />
-                    <br>
-                    <br>
-                    <br>
-                    <h5 id="revE">Download Firmware for Rev.E Printer</h5>
-                </div>
-                <br>
-
-            </div>
-    <!--Rev.E Dual-->
-            <div class="col-md-4">
-                <div class="column">
-                    <img class="pics" src="M2%20Rev.E%20Dual.jpg" alt="M2 Rev.E Dual">
-                    <br>
-                    <br>
-                    <br>
-                    <h5 id="revEdual">Download Firmware for Rev.E Dual Printer</h5>
-                </div>
-                <br>
-            </div>
-            <div class="col-md-4">
-                <div class="column">
-                    <img class="pics" src="rev_f_extruder.jpg" alt="Rev.F Extruder Assembly" data-zoom-image="rev_f_extruder.jpg">
-                    <br>
-                    <br>
-                    <br>
-                    <h5 id="revF">Download Firmware for Rev.F Printer</h5>
-                </div>
-                <br>
+        <div class="col-md-4">
+            <div id="ard3" style="float: left">
+                <img class="pics" src="Arduino_logo.png">
+                <h5>
+                    <center>Download Arduino 1.5.5 (Linux 64)</center>
+                </h5>
             </div>
         </div>
     </div>
     <br>
     <br>
-    <br>
+
     <!--Firmware Selector-->
     <div>
         <h3 class="col-md-12 greet">Not sure which firmware is correct?</h3>
@@ -120,7 +87,7 @@
                 <select id="z_motor" name="z_motor">
                         <option value="z_black">Black Z Motor</option>
                         <option value="z_silver">Silver Z Motor</option> 
-                    </select>
+                </select>
             </div>
         </div>
     </div>
@@ -134,16 +101,18 @@
         <div class="row column">
             <div class="col-md-12">
                 <h3><strong>24V Power Supply </strong></h3>
-                <pre><strong>If you have a 19V supply please contact support.makergear.com</strong></pre>
+                <pre>
+                    <strong>If you have a 19V supply please contact support.makergear.com</strong>
+                </pre>
                 <div>
                     <img class="pics zoom1" src="24V_Power_Supply.jpg" alt="power supply" data-oom-image="24V_Power_Supply_lg.jpg" width="170px" height="120px">
                 </div>
                 <select id="p_supply" name="psupply">
-                        <option value="24V">24V</option>                             
-                    </select>
+                    <option value="24V">24V</option>                             
+                </select>
             </div>
         </div>
-<!--
+        <!--
         <div class="row">
             <div class="col-md-6">
                 <h3><span id="stp2B" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
@@ -172,7 +141,7 @@
                     </select>
             </div>
         </div>
-<!--
+        <!--
         <div class="row">
             <div class="col-md-6">
                 <h3><span id="stp3B" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
@@ -205,8 +174,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
 
 
 
@@ -230,8 +199,8 @@
                         </select>
                 </div>
             </div>
-            
-<!--
+
+            <!--
             <div class="row">
                 <div class="col-md-6">
                     <h3><span id="stp5B" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
@@ -243,7 +212,7 @@
 -->
         </div>
     </div>
-        <div id="arrows" class="selector" style="display: none;">
+    <div id="arrows" class="selector" style="display: none;">
         <div class="row">
             <div class="col-md-6">
                 <h3><span id="back" onclick="move('back')" class="backArrow glyphicon glyphicon-arrow-left"></span></h3>
@@ -254,15 +223,67 @@
         </div>
     </div>
 
+    <div>
+        <center>
+            <h3>Common Quick Links</h3>
+        </center>
+    </div>
+    <br>
+    <br>
+    <!--Rev.E-->
+    <div class=" tutorial">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="column submit" style="float: right">
+                    <img class=" pics" src="M2%20Rev_thumb_lg_fix.jpg" alt="M2 Rev.E" />
+                    <br>
+                    <br>
+                    <br>
+                    <h5 id="revE">Download Firmware for Rev.E Printer</h5>
+                </div>
+                <br>
 
-<!--Import jquery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--Import elevate-zoom-->
-<script src="elevatezoom-master/jquery.elevatezoom.js"></script>
-<!--Import firmware.js-->
-<script type="application/javascript" src="firmware.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script> window.onload = addEventListener;</script>
+            </div>
+            <!--Rev.E Dual-->
+            <div class="col-md-4">
+                <div class="column">
+                    <img class="pics" src="M2%20Rev.E%20Dual.jpg" alt="M2 Rev.E Dual">
+                    <br>
+                    <br>
+                    <br>
+                    <h5 id="revEdual">Download Firmware for Rev.E Dual Printer</h5>
+                </div>
+                <br>
+            </div>
+            <div class="col-md-4">
+                <div class="column" style="float: left">
+                    <img class="pics" src="rev_f_extruder.jpg" alt="Rev.F Extruder Assembly" data-zoom-image="rev_f_extruder.jpg">
+                    <br>
+                    <br>
+                    <br>
+                    <h5 id="revF">Download Firmware for Rev.F Printer</h5>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+    <!--Import jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Import elevate-zoom-->
+    <script src="elevatezoom-master/jquery.elevatezoom.js"></script>
+    <!--Import firmware.js-->
+    <script type="application/javascript" src="firmware.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        window.onload = addEventListener;
+
+    </script>
 </body>
+
 </html>
