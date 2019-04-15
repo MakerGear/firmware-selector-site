@@ -5,26 +5,26 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 p {
     font-family: 'Oswald', sans-serif;
 }
 
-h3 {
+h1, h2, h2, h3 {
     font-family: 'Oswald', sans-serif;
 }
 
 
-h4 {
-    font-family: 'Oswald', sans-serif text-decoration: underline;
+h2 {
+    font-family: 'Oswald', sans-serif; 
+    text-decoration: underline;
 }
 
-h5 {
-    font-family: 'Oswald', sans-serif;
-}
 
-h5:hover {
+
+h3:hover {
     color: #FF6300;
 
 }
@@ -74,6 +74,11 @@ pre {
 
 }
 
+.steps1{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
 
 .center-text {
     text-align: center;
@@ -93,7 +98,6 @@ pre {
     padding: 10px;
 }
 
-
 .hepics {
     padding-top: 15px;
 }
@@ -110,3 +114,20 @@ pre {
 .nextArrow {
     float: left;
 }
+
+.links{
+    color: #FF6300;
+    background-color: black;
+    padding: 10px;
+   
+}
+
+
+#ard1{
+    padding-left: 55%;
+}
+
+#ard3{
+    padding-right: 55%;
+}
+

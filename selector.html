@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>M2 Firmware Selector</title>
+
+    <!--Import bootstrap.css-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--Import font-->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+    <div class="col-md-12 header">
+        <a href="https://www.makergear.com/"><img src="images/mglogo_410x.png" alt="makergear logo"></a>
+    </div>
+
+    <div>
+        <h2 class="greet"><strong>MakerGear M2 Firmware Selector</strong></h2>
+    </div>
+    <!--Tutorial Video-->
+    <div class="row tutorial">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <center>
+                <h2>Step 1: Watch this tutorial to help you with your M2 Firmware Upgrade</h2>
+                <br>
+                <a href="https://drive.google.com/open?id=0B8Qp-2kNPdBibjBmck9YVFpucVk"><img src="images/Tutorial.PNG" height="320px" width="500px" alt="tutorial link"></a>
+            </center>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <br>
+
+    <center>
+        <h2>Step 2: Download Arduino</h2>
+    </center>
+    <!--Arduino-->
+    <div class="row">
+        <div class="col-md-4">
+            <div id="ard1">
+                <center><img class="pics" src="images/Arduino_logo.png" alt="arduino"></center>
+                <h3>
+                    <center>Download Arduino 1.5.5 (Windows)</center>
+                </h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="ard2">
+                <center><img class="pics" src="images/Arduino_logo.png" alt="arduino"></center>
+                <h3>
+                    <center>Download Arduino 1.5.5 (Mac)</center>
+                </h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="ard3">
+                <center><img class="pics" src="images/Arduino_logo.png" alt="arduino"></center>
+                <h3>
+                    <center>Download Arduino 1.5.5 (Linux 64)</center>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="col-md-12"><center><h2>Rev E and Rev F printers do not require firmware updates to use the Geeetech LCD</h2></center></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--Firmware Selector-->
+    <center>
+        <h2>Step 3: Select your firmware</h2>
+    </center>
+    <br>
+    <br>
+    <div>
+        <h2 class="col-md-12 greet">Not sure which firmware is correct?</h2>
+    </div>
+    <div id="stp1">
+        <a href="#1">
+            <h2 class="greet2">Click Here to Try our Custom M2 Firmware Selector</h2>
+        </a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+    <!--Step 1-->
+    <div id="1" class="selector" style="display: none;">
+        <div class="row center-text">
+            <div class="col-md-12">
+                <h2><strong>Select your Z-motor</strong></h2>
+                <pre><strong>Black or Silver</strong></pre>
+                <div>
+                    <img class="pics zoom2" src="images/z_motor_comparison.jpg" alt="z_motor" data-zoom-image="images/z_motor_comparison.jpg" width="170px" height="120px">
+                </div>
+                <select id="z_motor" name="z_motor">
+                        <option value="z_black">Black Z Motor</option>
+                        <option value="z_silver">Silver Z Motor</option> 
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Step 2-->
+    <div id="2" class="selector" style="display: none;">
+        <div class="row center-text">
+            <div class="col-md-12">
+                <h2><strong>24V Power Supply </strong></h2>
+                <pre>
+                    <strong>If you have a 19V supply please contact support.makergear.com</strong>
+                </pre>
+                <div>
+                    <img class="pics zoom1" src="images/24V_Power_Supply.jpg" alt="power supply" data-oom-image="images/24V_Power_Supply_lg.jpg" width="170px" height="120px">
+                </div>
+                <select id="p_supply" name="psupply">
+                    <option value="24V">24V</option>                             
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Step 3-->
+    <div id="3" class="selector" style="display: none;">
+        <div class="row center-text">
+            <div class="col-md-12">
+                <h2><strong>Select Z-endstop position</strong></h2>
+                <pre><strong>          Zmax Bottom                              Zmin Top               </strong></pre>
+                <div>
+                    <img class="pics zoom2" src="images/Z%20max.jpg" alt="z max" data-oom-image="images/Z_max_lg.jpg">
+                    <img class="pics zoom2" src="images/Z%20min.jpg" alt="z min" data-oom-image="images/Zmin_lg.jpg">
+                </div>
+                <select id="z_stop" name="zstop">
+                        <option value="zmax">Z max (Bottom)</option>
+                        <option value="zmin">Z min (Top)</option>
+                    </select>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Step 4 -->
+    <div id="4" class="selector" style="display: none;">
+        <div class="row center-text">
+            <div class="col-md-12">
+                <h2><strong>Select your Hotend</strong></h2>
+                <pre><strong>V4 Hot End                                          V3B HotEnd                                           Rev.F     </strong></pre>
+                <div>
+                    <img class="pics zoom1" src="images/v4_lg.jpg" alt="V4 Hotend" data-zoom-image="images/v4_lg.jpg">
+                    <img class="pics zoom1" src="images/v3b_lg.jpg" alt="V3B Hotend" data-zoom-image="images/v3b_lg.jpg">
+                    <img class="pics zoom1" src="images/rev_f_extruder.jpg" alt="Rev.F Extruder Assembly" data-zoom-image="images/rev_f_extruder.jpg">
+                </div>
+                <select id="hotend" name="hotend">
+                        <option value="v4">V4 Hotend</option>
+                        <option value="v4d">V4 Hotend (Dual)</option>
+                        <option value="v3b">v3b Hotend</option>
+                        <option value="rvf">Rev.F</option>
+                    </select>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Step 5-->
+    <div id="5" class="selector" style="display: none;">
+        <div class="">
+            <div class="row center-text">
+                <div class="col-md-12">
+                    <h2><strong>Select your LCD</strong></h2>
+                    <pre><strong>   Viki 1                                       Viki 2                                   Geeetech    </strong></pre>
+                    <div>
+                        <img class="pics zoom2" src="images/viki_1.jpg" alt="Viki 1 LCD" data-zoom-image="images/viki_1.jpg">
+                        <img class="pics zoom2" src="images/viki2.jpg" alt="Viki 2 LCD" data-zoom-image="images/viki2.jpg">
+                        <img class="pics zoom1" src="images/Geeetech.jpg" alt="Geeetech LCD" data-zoom-image="images/Geeetech.jpg">
+                    </div>
+                    <select id="lcd" name="lcd">
+                            <option value="none">No LCD</option>
+                            <option value="viki1">Viki 1</option>
+                            <option value="viki2">Viki 2</option>
+                            <option value="geetech">Geeetech</option>
+                        </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="arrows" class="selector" style="display: none;">
+        <div class="row">
+            <div class="col-md-6">
+                <h2><span id="back" onclick="move('back')" class="backArrow glyphicon glyphicon-arrow-left"></span></h2>
+            </div>
+            <div class="col-md-6">
+                <h2><span id="forward" onclick="move('forward')" class="nextArrow glyphicon glyphicon-arrow-right"></span></h2>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <center>
+            <h2>Common M2 Quick Links</h2>
+        </center>
+    </div>
+    <br>
+    <br>
+    <!--Rev.E-->
+    <div class=" tutorial">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="center-text center-text">
+                    <img class=" pics" src="images/M2%20Rev_thumb_lg_fix.jpg" alt="M2 Rev.E" />
+                    <br>
+                    <br>
+                    <br>
+                    <h3 id="revE">Download Firmware for Rev.E Printer</h3>
+                </div>
+                <br>
+            </div>
+            <!--Rev.E Dual-->
+            <div class="col-md-4">
+                <div class="center-text">
+                    <img class="pics" src="images/M2%20Rev.E%20Dual.jpg" alt="M2 Rev.E Dual">
+                    <br>
+                    <br>
+                    <br>
+                    <h3 id="revEdual">Download Firmware for Rev.E Dual Printer</h3>
+                </div>
+                <br>
+            </div>
+            <div class="col-md-4">
+                <div >
+                    <img class="pics" src="images/rev_f_extruder.jpg" alt="Rev.F Extruder">
+                    <br>
+                    <br>
+                    <br>
+                    <h3 id="revF">Download Firmware for Rev.F Printer</h3>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <!--Import jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Import elevate-zoom-->
+    <script src="elevatezoom-master/jquery.elevatezoom.js"></script>
+    <!--Import firmware.js-->
+    <script type="application/javascript" src="firmware.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        window.onload = addEventListener;
+    </script>
+</body>
+
+</html>
