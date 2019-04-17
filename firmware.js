@@ -7,6 +7,8 @@ function addEventListener(){
     document.getElementById('revE').addEventListener("click", revE, false);
     document.getElementById('revEdual').addEventListener("click", dual, false);
     document.getElementById('revF').addEventListener("click", revf, false);
+    document.getElementById('revG').addEventListener("click", revg, false);
+    document.getElementById('v4Cool').addEventListener("click", v4Cool, false);
     //opens selector
     document.getElementById('stp1').addEventListener("click", step1, false); 
 
@@ -35,6 +37,21 @@ function revf() {
 
     if (answer) {
         window.location = "https://github.com/MakerGear/m2firmware/archive/AQB3f.zip";
+    } else answer = false;
+}
+
+function revg(){
+    const answer = confirm("Please click to download RevG firmware.");
+
+    if (answer) {
+        window.location = "http://makergear.wikidot.com/local--files/m2-firmware/m2-RevG-firmware.zip";
+    } else answer = false;
+}
+function v4Cool(){
+    const answer = confirm("Please click to download V4 F/G Cooling upgrade firmware.");
+
+    if (answer) {
+        window.location = "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG-cooling%20-upgrade.zip";
     } else answer = false;
 }
 

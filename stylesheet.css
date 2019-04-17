@@ -6,22 +6,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
-}
-
-p {
     font-family: 'Oswald', sans-serif;
 }
-
-h1, h2, h2, h3 {
-    font-family: 'Oswald', sans-serif;
-}
-
-
-h2 {
-    font-family: 'Oswald', sans-serif; 
-    text-decoration: underline;
-}
-
 
 
 h3:hover {
@@ -36,6 +22,10 @@ span:hover {
 pre {
     font-family: 'Oswald', sans-serif;
     text-align: center;
+}
+
+select{
+    font-size: 150%;
 }
 
 /*classes*/
@@ -118,8 +108,7 @@ pre {
 .links{
     color: #FF6300;
     background-color: black;
-    padding: 10px;
-   
+    padding: 10px;  
 }
 
 
@@ -129,5 +118,23 @@ pre {
 
 #ard3{
     padding-right: 55%;
+}
+#exceptions{
+    color: #FF6300;
+    
+}
+
+
+/*media queries*/
+
+@media only screen and (min-width: 736px){
+    
+    #ard1{
+        padding-left: 1%;
+    }
+    #ard3{
+        padding-right: 1%;
+    }
+    
 }
 
